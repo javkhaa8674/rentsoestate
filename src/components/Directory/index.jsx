@@ -4,6 +4,7 @@ import "react-slideshow-image/dist/styles.css";
 import banner1 from "./../../assets/banner 1.png";
 import banner2 from "./../../assets/banner 2.jpg";
 import banner3 from "./../../assets/banner 3.jpg";
+import firstImage from "./../../assets/Banner.png";
 
 const Directory = (props) => {
   const fadeImages = [
@@ -23,7 +24,8 @@ const Directory = (props) => {
 
   return (
     <div className="slide-container">
-      <Fade>
+      <img src={firstImage} />
+      {/* <Fade>
         {fadeImages.map((fadeImage, index) => (
           <div className="each-fade" key={index}>
             <div className="image-container">
@@ -32,7 +34,7 @@ const Directory = (props) => {
             <h2>{fadeImage.caption}</h2>
           </div>
         ))}
-      </Fade>
+      </Fade> */}
     </div>
   );
 };
