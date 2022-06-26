@@ -17,25 +17,20 @@ import post2 from "./pages/BlogPosts/blog-post.2.md";
 import post3 from "./pages/BlogPosts/blog-post.3.md";
 
 const sections = [
-  { title: "Technology", url: "#" },
-  { title: "Design", url: "#" },
-  { title: "Culture", url: "#" },
-  { title: "Business", url: "#" },
-  { title: "Politics", url: "#" },
-  { title: "Opinion", url: "#" },
-  { title: "Science", url: "#" },
-  { title: "Health", url: "#" },
-  { title: "Style", url: "#" },
-  { title: "Travel", url: "#" },
+  { title: "Үл хөдлөх хөрөнгийн тухай", url: "/aboutRealEstate" },
+  { title: "Хэрэв та худалдах бол", url: "#" },
+  { title: "Хэрэв та худалдан авах бол", url: "#" },
+  { title: "Үл хөдлөх хөрөнгийн борлуулалт", url: "#" },
+  { title: "Үл хөдлөх эзэмшлийн удирдлага", url: "#" },
 ];
 
 const mainFeaturedPost = {
-  title: "Title of a longer featured blog post",
+  title: "Монголд үл хөдлөх хөрөнгийн цогц үйлчилгээг бид үзүүлнэ.",
   description:
     "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
   image: "https://source.unsplash.com/random",
   imageText: "main image description",
-  linkText: "Continue reading…",
+  linkText: "Илүү ихийг…",
 };
 
 const featuredPosts = [
@@ -90,7 +85,7 @@ export default function Blog() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Container maxWidth="lg">
-        <Header title="Blog" sections={sections} />
+        <Header title="Рэнц'O Эстэйт" sections={sections} />
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={4}>
