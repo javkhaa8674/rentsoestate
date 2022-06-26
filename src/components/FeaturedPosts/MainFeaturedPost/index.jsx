@@ -5,10 +5,12 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
 import Box from "@mui/material/Box";
+import MainImage from "./../../../assets/Banner.png";
 
 function MainFeaturedPost(props) {
   const { post } = props;
 
+  console.log("props", props);
   return (
     <Paper
       sx={{
@@ -19,14 +21,14 @@ function MainFeaturedPost(props) {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
-        backgroundImage: `url(${post.image})`,
+        backgroundImage: `url(${MainImage})`,
       }}
     >
       {/* Increase the priority of the hero background image */}
       {
         <img
           style={{ display: "none" }}
-          src={post.image}
+          //src={post.image}
           alt={post.imageText}
         />
       }
