@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("http://fonts.cdnfonts.com/css/segoe-ui-4");
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.Toolbar {
+    display: flex;
+    height: 80px;
+    position: sticky;
+    background-color: #f3f3f3;
+    color: #000;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    justify-content: space-between;
+    z-index: 1;
+    padding: 1rem;
+}
+
+.Toolbar ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.Toolbar ul li a {
+    color: #007ab3;
+    padding: 0.75rem;
+    margin: 0 0.25rem;
+    font-size: 1.3rem;
+}
+
+.Toolbar ul li a:hover {
+    background: #80bdd9;
+    border-radius: 5px;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0.75rem, 0;
+}
+
+
+/* utility class */

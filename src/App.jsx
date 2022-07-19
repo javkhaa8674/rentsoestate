@@ -7,6 +7,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Header from "./components/Header";
+import ShowCase from "./components/ShowCase";
 import MainFeaturedPost from "./components/FeaturedPosts/MainFeaturedPost";
 import FeaturedPost from "./components/FeaturedPosts/FeaturedPost";
 import Main from "./layouts/Main";
@@ -78,14 +79,18 @@ const sidebar = {
   ],
 };
 
-const theme = createTheme();
+const theme = createTheme({});
 
 export default function Blog() {
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Container maxWidth="lg">
+      <div>
         <Header title="Рэнц'O Эстэйт" sections={sections} />
+      </div>
+      <div>
+        <ShowCase />
+      </div>
+      {/* <Container maxWidth="xl">  
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={4}>
@@ -107,7 +112,7 @@ export default function Blog() {
       <Footer
         title="Footer"
         description="Something here to give the footer a purpose!"
-      />
+      /> */}
     </ThemeProvider>
   );
 }

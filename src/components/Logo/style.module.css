@@ -1,0 +1,17 @@
+.Logo {
+    display: flex;
+    height: 100%;
+    cursor: pointer;
+}
+
+.Logo img {
+    height: 100%;
+}
+
+
+/* utility class */
+
+.TextPrimary {
+    color: #007ab3;
+    margin-right: 1rem;
+}
