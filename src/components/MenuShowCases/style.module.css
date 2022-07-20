@@ -1,0 +1,71 @@
+.container {
+    display: flex;
+    height: 400px;
+    margin-top: 0.5rem;
+}
+
+.container .home {
+    display: flex;
+    cursor: pointer;
+    background: #93cb52;
+    color: #fff;
+    margin-right: 0.5rem;
+    justify-content: start;
+    align-items: flex-end;
+    text-align: center;
+    height: 100%;
+    flex: 1;
+    background: rgb(78, 24, 179) url(../../assets/DSC_2970.JPG) no-repeat center center/cover;
+}
+
+.home .Showcase {
+    background: linear-gradient( to bottom, rgba(0, 122, 179, 0), rgba(194, 207, 11, 0.8));
+}
+
+.container .question {
+    display: flex;
+    background: #5291cb;
+    color: #fff;
+    flex: 1;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    height: 100%;
+    background: rgb(78, 24, 179) url(../../assets/DSC_2973.JPG) no-repeat center center/cover;
+}
+
+.question .Showcase {
+    background: linear-gradient( to bottom, rgba(0, 122, 179, 0), rgba(248, 18, 179, 0.8));
+}
+
+.container .broker {
+    display: flex;
+    background: #db36b8;
+    color: #fff;
+    flex: 1;
+    margin-left: 0.5rem;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    height: 100%;
+    background: rgb(78, 24, 179) url(../../assets/DSC_2970.JPG) no-repeat center center/cover;
+}
+
+.broker .Showcase {
+    background: linear-gradient( to bottom, rgba(0, 122, 179, 0), rgba(42, 228, 25, 0.8));
+}
+
+.lHeading {
+    font-size: 3rem;
+}
+
+.lHeading a {
+    color: #fff;
+    padding-bottom: 1rem;
+}
+
+.container .btn {
+    font-size: 2rem;
+    padding: 1rem;
+    color: #fff;
+}

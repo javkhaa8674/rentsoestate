@@ -1,18 +1,14 @@
 import React from "react";
 import css from "./style.module.css";
 
-const ShowCase = () => {
+const ShowCase = (props) => {
   return (
     <header id={css.showcase}>
       <div className={css.showcaseContent}>
-        <h1 className={css.lHeading}>Бидний боломжид хязгаар үгүй</h1>
-        <p className={css.lead}>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti
-          veniam adipisci soluta! Exercitationem, soluta. Accusamus voluptatem
-          perspiciatis unde eaque consectetur!
-        </p>
+        <h1 className={css.lHeading}>{props.t("ShowCaseText.h1")}</h1>
+        <p className={css.lead}>{props.t("ShowCaseText.p")}</p>
         <a href="#what" className={css.btn}>
-          Дэлгэрэнгүй
+          {props.t("ShowCaseText.a")}
         </a>
       </div>
     </header>

@@ -1,23 +1,23 @@
-import * as React from "react";
-import CssBaseline from "@mui/material/CssBaseline";
-import Grid from "@mui/material/Grid";
-import Container from "@mui/material/Container";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
+
 import Header from "./components/Header";
 import ShowCase from "./components/ShowCase";
-import MainFeaturedPost from "./components/FeaturedPosts/MainFeaturedPost";
-import FeaturedPost from "./components/FeaturedPosts/FeaturedPost";
-import Main from "./layouts/Main";
-import Sidebar from "./layouts/SideBar";
-import Footer from "./components/Footer";
-import post1 from "./pages/BlogPosts/blog-post.1.md";
-import post2 from "./pages/BlogPosts/blog-post.2.md";
-import post3 from "./pages/BlogPosts/blog-post.3.md";
+import MenuShowCases from "./components/MenuShowCases";
 
-const sections = [
+const languages = [
+  { code: "en", name: "English" },
+  { code: "rus", name: "Русский" },
+  { code: "deu", name: "Deutsch" },
+];
+
+const Menu = [
+  { title: "Home", url: "/aboutRealEstate" },
+  { title: "Асуулт байна уу?", url: "#" },
+  { title: "broker@rentsoestate.mn", url: "#" },
+];
+
+const MainShowCase = [
   { title: "Үл хөдлөх хөрөнгийн тухай", url: "/aboutRealEstate" },
   { title: "Хэрэв та худалдах бол", url: "#" },
   { title: "Хэрэв та худалдан авах бол", url: "#" },
@@ -25,94 +25,33 @@ const sections = [
   { title: "Үл хөдлөх эзэмшлийн удирдлага", url: "#" },
 ];
 
-const mainFeaturedPost = {
-  title: "Монголд үл хөдлөх хөрөнгийн цогц үйлчилгээг бид үзүүлнэ.",
-  description:
-    "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
-  image: "https://source.unsplash.com/random",
-  imageText: "Үндсэн зургийн тайлбар",
-  linkText: "Илүү ихийг…",
-};
-
-const featuredPosts = [
-  {
-    title: "Featured post",
-    date: "Nov 12",
-    description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content.",
-    image: "https://source.unsplash.com/random",
-    imageLabel: "Image Text",
-  },
-  {
-    title: "Post title",
-    date: "Nov 11",
-    description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content.",
-    image: "https://source.unsplash.com/random",
-    imageLabel: "Image Text",
-  },
+const FeaturedShowCases = [
+  { title: "Үл хөдлөх хөрөнгийн тухай", url: "/aboutRealEstate" },
+  { title: "Хэрэв та худалдах бол", url: "#" },
+  { title: "Хэрэв та худалдан авах бол", url: "#" },
+  { title: "Үл хөдлөх хөрөнгийн борлуулалт", url: "#" },
+  { title: "Үл хөдлөх эзэмшлийн удирдлага", url: "#" },
 ];
 
-const posts = [post1, post2, post3];
+const App = () => {
+  const { t, i18n } = useTranslation();
 
-const sidebar = {
-  title: "About",
-  description:
-    "Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.",
-  archives: [
-    { title: "March 2020", url: "#" },
-    { title: "February 2020", url: "#" },
-    { title: "January 2020", url: "#" },
-    { title: "November 1999", url: "#" },
-    { title: "October 1999", url: "#" },
-    { title: "September 1999", url: "#" },
-    { title: "August 1999", url: "#" },
-    { title: "July 1999", url: "#" },
-    { title: "June 1999", url: "#" },
-    { title: "May 1999", url: "#" },
-    { title: "April 1999", url: "#" },
-  ],
-  social: [
-    { name: "GitHub", icon: GitHubIcon },
-    { name: "Twitter", icon: TwitterIcon },
-    { name: "Facebook", icon: FacebookIcon },
-  ],
-};
+  const handleClick = (lang) => {
+    i18n.changeLanguage(lang);
+  };
 
-const theme = createTheme({});
-
-export default function Blog() {
   return (
-    <ThemeProvider theme={theme}>
-      <div>
-        <Header title="Рэнц'O Эстэйт" sections={sections} />
-      </div>
-      <div>
-        <ShowCase />
-      </div>
-      {/* <Container maxWidth="xl">  
-        <main>
-          <MainFeaturedPost post={mainFeaturedPost} />
-          <Grid container spacing={4}>
-            {featuredPosts.map((post) => (
-              <FeaturedPost key={post.title} post={post} />
-            ))}
-          </Grid>
-          <Grid container spacing={5} sx={{ mt: 3 }}>
-            <Main title="From the firehose" posts={posts} />
-            <Sidebar
-              title={sidebar.title}
-              description={sidebar.description}
-              archives={sidebar.archives}
-              social={sidebar.social}
-            />
-          </Grid>
-        </main>
-      </Container>
-      <Footer
-        title="Footer"
-        description="Something here to give the footer a purpose!"
-      /> */}
-    </ThemeProvider>
+    <div className="Container">
+      <section>
+        <Header title="Рэнц'O Эстэйт" handleClick={handleClick} t={t} />
+      </section>
+      <section>
+        <ShowCase t={t} />
+      </section>
+      <section>
+        <MenuShowCases t={t} />
+      </section>
+    </div>
   );
-}
+};
+export default App;

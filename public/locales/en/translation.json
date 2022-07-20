@@ -1,0 +1,32 @@
+{
+    "CompanyName": {
+        "1": "Rents'O Estate",
+        "2": "Rents'O",
+        "3": "Estate"
+    },
+    "Menu": {
+        "1": "Home",
+        "2": "Any Question",
+        "3": "broker@rentsoestate.mn"
+    },
+    "MenuURL": {
+        "1": "/",
+        "2": "/question",
+        "3": "/broker"
+    },
+    "ShowCaseText": {
+        "h1": "There is no limit to our possibilities ",
+        "p": "Lorem ipsum dolor sit amet consectetur adipisicing elit dfdas dfasddsfa fdsafdsfa fdasadfda dfdafds, dasdfdf. dfadsfs d fads",
+        "a": "Read More"
+    },
+    "MenuShowCases": {
+        "home": {
+            "h2": "if you want to sell",
+            "p": "Lorem ipsum dolor sit amet consectetur adipisicing elit dfdas dfasddsfa fdsafdsfa fdasadfda dfdafds, dasdfdf. dfadsf."
+        },
+        "question": {
+            "h2": "if you want to buy",
+            "p": "Lorem ipsum dolor sit amet consectetur adipisicing elit dfdas dfasddsfa fdsafdsfa fdasadfda dfdafds, dasdfdf. dfadsf."
+        }
+    }
+}

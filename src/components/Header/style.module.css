@@ -16,7 +16,7 @@
     align-items: center;
     top: 0;
     justify-content: space-between;
-    z-index: 1;
+    z-index: 90;
     padding: 1rem;
 }
 
@@ -24,6 +24,26 @@
     display: flex;
     align-items: center;
     list-style: none;
+}
+
+.Toolbar ul select {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f3f3;
+    color: #007ab3;
+    padding: 0.75rem;
+    margin: 0 0.25rem;
+    font-size: 1.2rem;
+    background: none;
+    border: none;
+}
+
+.Toolbar ul select option:hover {
+    background-color: #f3f3f3;
+    color: #007ab3;
+    padding: 0.75rem;
+    margin: 0 0.25rem;
+    font-size: 1.3rem;
+    transition: 0.2s ease-in;
 }
 
 .Toolbar ul li a {
@@ -36,9 +56,10 @@
 .Toolbar ul li a:hover {
     background: #80bdd9;
     border-radius: 5px;
+    transition: transform 250ms, opacity 400ms, ease-in;
 }
 
-body {
+.Toolbar body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
