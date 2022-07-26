@@ -27,6 +27,10 @@
         "question": {
             "h2": "if you want to buy",
             "p": "Lorem ipsum dolor sit amet consectetur adipisicing elit dfdas dfasddsfa fdsafdsfa fdasadfda dfdafds, dasdfdf. dfadsf."
+        },
+        "broker": {
+            "h2": "Login broker section",
+            "p": "Please Click here"
         }
     }
 }

@@ -1,0 +1,54 @@
+/* utility class */
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem;
+    overflow: hidden;
+}
+
+.mHeading {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+}
+
+.py1 {
+    padding: 1.5rem 0;
+}
+
+.py2 {
+    padding: 2rem 0;
+}
+
+.py3 {
+    padding: 3rem 0;
+}
+
+
+/* Section Бид юу хийдэг вэ? */
+
+.container .items {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.container .item {
+    flex: 1;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.container .item h3 {
+    padding: 1rem 1rem;
+}
+
+.TextPrimary {
+    color: #007ab3;
+    margin-right: 0.5rem;
+}

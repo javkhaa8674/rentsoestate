@@ -28,7 +28,7 @@
 
 .Toolbar ul select {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f3f3f3;
+    background-color: #302a2a;
     color: #007ab3;
     padding: 0.75rem;
     margin: 0 0.25rem;
@@ -60,7 +60,7 @@
 }
 
 .Toolbar body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI, Tahoma, Geneva, Verdana, sans-serif";
 }
 
 a {
@@ -69,6 +69,12 @@ a {
 
 p {
     margin: 0.75rem, 0;
+}
+
+color {
+    background: #5e5959;
+    color: #585353;
+    color: #000;
 }
 
 
