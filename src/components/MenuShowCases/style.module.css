@@ -1,7 +1,6 @@
 .container {
     display: flex;
     height: 400px;
-    margin-top: 0.5rem;
 }
 
 .container .home {
@@ -12,7 +11,7 @@
     margin-right: 0.5rem;
     justify-content: start;
     align-items: flex-end;
-    text-align: center;
+    text-align: flex-start;
     height: 100%;
     flex: 1;
     background: rgb(78, 24, 179) url(../../assets/DSC_2970.JPG) no-repeat center center/cover;

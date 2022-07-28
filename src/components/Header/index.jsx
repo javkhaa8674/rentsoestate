@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext, useMemo } from "react";
+import React, { useState } from "react";
 import {
   useTheme,
   Box,
@@ -10,36 +10,23 @@ import {
   MenuItem,
   Avatar,
   Button,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
+  Grid,
 } from "@mui/material";
 import BrightnessLowIcon from "@mui/icons-material/BrightnessLow";
 import Brightness3Icon from "@mui/icons-material/Brightness3";
 import MenuIcon from "@mui/icons-material/Menu";
 
-import css from "./style.module.css";
 import Logo from "./../../assets/logo.png";
 import { Container } from "@mui/system";
-
-const DarkButton = (props) => {
-  const theme = useTheme();
-  return (
-    <Box>
-      <IconButton onClick={props.colorMode.toggleColorMode} color="primary">
-        {theme.palette.mode === "light" ? (
-          <Brightness3Icon />
-        ) : (
-          <BrightnessLowIcon />
-        )}
-      </IconButton>
-    </Box>
-  );
-};
 
 const Header = (props) => {
   const [langBtn, setLangBtn] = useState(false);
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [colorMode, setColorMode] = useState(false);
-
-  const theme = useTheme();
 
   const handleClick = () => {
     setLangBtn(!langBtn);
@@ -55,23 +42,14 @@ const Header = (props) => {
   };
 
   const handleColorMode = () => {
-    props.colorMode.toggleColorMode();
+    props.handleMode();
     setColorMode(!colorMode);
   };
 
   return (
-    <AppBar
-      position="sticky"
-      sx={{
-        display: "flex",
-        bgcolor: "background.default",
-        color: "text.primary",
-        height: "100px",
-        justifyContent: "center",
-      }}
-    >
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
+    <AppBar color="inherit">
+      <Toolbar disableGutters sx={{ height: "100px" }}>
+        <Box display="flex" alignItems="center">
           <Avatar
             src={Logo}
             alt="RentsoEstate Logo"
@@ -83,8 +61,8 @@ const Header = (props) => {
           <Typography
             variant="h6"
             noWrap
+            color="text.primary"
             sx={{
-              color: theme.primary.main,
               marginRight: "0.5rem",
               textDecoration: "none",
             }}
@@ -101,84 +79,113 @@ const Header = (props) => {
           >
             {props.t("CompanyName.3")}
           </Typography>
-          <Box
+        </Box>
+        <Box
+          sx={{
+            flexGrow: 1,
+            display: { xs: "flex", md: "none" },
+            justifyContent: "flex-end",
+          }}
+        >
+          <IconButton
+            size="large"
+            aria-label="account of current user"
+            aria-controls="menu-appbar"
+            aria-haspopup="true"
+            onClick={handleOpenNavMenu}
+            color="inherit"
+          >
+            <MenuIcon />
+          </IconButton>
+          <Menu
+            id="menu-appbar"
+            anchorEl={anchorElNav}
+            anchorOrigin={{
+              vertical: "bottom",
+              horizontal: "left",
+            }}
+            keepMounted
+            transformOrigin={{
+              vertical: "top",
+              horizontal: "left",
+            }}
+            open={Boolean(anchorElNav)}
+            onClose={handleCloseNavMenu}
             sx={{
-              flexGrow: 1,
-              alignItems: "flex-end",
-              display: { xs: "flex", md: "none" },
-              justifyContent: "flex-end",
+              display: { xs: "block", md: "none" },
             }}
           >
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
-              }}
-            >
-              <MenuItem
-                onClick={handleCloseNavMenu}
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "flex-start",
-                }}
-              >
-                <Typography textAlign="center">{props.t("Menu.1")}</Typography>
-                <Typography textAlign="center">{props.t("Menu.2")}</Typography>
-                <Typography textAlign="center">{props.t("Menu.3")}</Typography>
-                <Typography onClick={handleColorMode}>
-                  {colorMode ? "Light Mode" : "Dark Mode"}
-                </Typography>
-              </MenuItem>
-            </Menu>
-          </Box>
-          <Box
-            sx={{
-              flexGrow: 1,
-              display: { xs: "none", md: "flex" },
-              justifyContent: "flex-end",
-            }}
-          >
-            <Button key={props.t("Menu.1")} onClick={handleCloseNavMenu}>
-              {props.t("Menu.1")}
-            </Button>
-            <Button key={props.t("Menu.2")} onClick={handleCloseNavMenu}>
-              {props.t("Menu.2")}
-            </Button>
-            <Button key={props.t("Menu.3")} onClick={handleCloseNavMenu}>
-              {props.t("Menu.3")}
-            </Button>
-            {langBtn ? (
-              <Button onClick={handleClick}>English</Button>
+            <MenuItem onClick={handleCloseNavMenu}>
+              <Typography textAlign="center">{props.t("Menu.1")}</Typography>
+            </MenuItem>
+            <MenuItem onClick={handleCloseNavMenu}>
+              <Typography textAlign="center">{props.t("Menu.2")}</Typography>
+            </MenuItem>
+            <MenuItem onClick={handleCloseNavMenu}>
+              <Typography textAlign="center">{props.t("Menu.3")}</Typography>
+            </MenuItem>
+            <MenuItem onClick={handleCloseNavMenu}>
+              <Typography onClick={handleColorMode}>
+                {colorMode ? "Light Mode" : "Dark Mode"}
+              </Typography>
+            </MenuItem>
+          </Menu>
+        </Box>
+        <Grid
+          container
+          justifyContent="flex-end"
+          alignItems="center"
+          sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
+        >
+          <Typography primary={props.t("Menu.1")} sx={{ marginRight: "1rem" }}>
+            {props.t("Menu.1")}
+          </Typography>
+          <Typography primary={props.t("Menu.2")} sx={{ marginRight: "1rem" }}>
+            {props.t("Menu.2")}
+          </Typography>
+          <Typography primary={props.t("Menu.3")} sx={{ marginRight: "1rem" }}>
+            {props.t("Menu.3")}
+          </Typography>
+          {langBtn ? (
+            <Typography onClick={handleClick}>English</Typography>
+          ) : (
+            <Typography onClick={handleClick}>Монгол</Typography>
+          )}
+          <IconButton onClick={props.handleMode}>
+            {props.mode === "light" ? (
+              <Brightness3Icon />
             ) : (
-              <Button onClick={handleClick}>Монгол</Button>
+              <BrightnessLowIcon />
             )}
-            <DarkButton {...props} />
-          </Box>
-        </Toolbar>
-      </Container>
+          </IconButton>
+          {/* <ListItem>
+            <ListItemButton>
+              <ListItemText primary={props.t("Menu.2")} />
+            </ListItemButton>
+          </ListItem>
+          <ListItem>
+            <ListItemButton>
+              <ListItemText primary={props.t("Menu.3")} />
+            </ListItemButton>
+          </ListItem>
+          <ListItem>
+            {langBtn ? (
+              <ListItemText onClick={handleClick} primary="English" />
+            ) : (
+              <ListItemText onClick={handleClick} primary="Монгол" />
+            )}
+          </ListItem>
+          <ListItem>
+            <IconButton onClick={props.handleMode}>
+              {props.mode === "light" ? (
+                <Brightness3Icon />
+              ) : (
+                <BrightnessLowIcon />
+              )}
+            </IconButton>
+          </ListItem> */}
+        </Grid>
+      </Toolbar>
     </AppBar>
   );
 };

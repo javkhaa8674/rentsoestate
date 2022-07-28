@@ -1,10 +1,10 @@
 import React from "react";
-import { Grid, Typography, Button } from "@mui/material";
+import { Grid, Typography, Button, Box } from "@mui/material";
 import Image from "./../../assets/contracosta.png";
 
 const sectionStyle = {
   height: "100vh",
-  backgroundImage: `url(${Image})`,
+  backgroundImage: `url(${Image}`,
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
 };
@@ -13,13 +13,10 @@ const BoxShowCase = (props) => {
   return (
     <Grid
       container
-      maxWidth="fixed"
+      maxWidth="xl"
       style={sectionStyle}
       direction="column"
-      sx={{
-        textAlign: "center",
-        padding: "0px",
-      }}
+      sx={{ position: "relative" }}
     >
       <Grid
         xs={12}
@@ -36,16 +33,16 @@ const BoxShowCase = (props) => {
         <Grid item xs={6} md={6}>
           <Grid item xs={12} sx={{ color: "#fff" }}>
             <Typography
+              variant="h2"
               sx={{
                 fontFamily: "Tahoma",
                 color: "#fff",
-                fontSize: "5rem",
-                lineHeight: "1.1",
               }}
             >
               {props.t("ShowCaseText.h1")}
             </Typography>
             <Typography
+              paragraph="true"
               sx={{
                 fontFamily: "Tahoma",
                 fontSize: "1.3rem",

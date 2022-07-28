@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-import App from "./App";
+import App from "./MyApp";
 import reportWebVitals from "./reportWebVitals";
 import "./index.scss";
 import "./i18next.js";

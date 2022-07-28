@@ -32,5 +32,8 @@
             "h2": "Login broker section",
             "p": "Please Click here"
         }
+    },
+    "Copyright": {
+        "p": "© 2022 Rents'O Estate LLC"
     }
 }

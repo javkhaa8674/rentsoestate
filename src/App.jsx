@@ -1,17 +1,8 @@
-import React, { useMemo, useState, useContext } from "react";
-import {
-  useTheme,
-  ThemeProvider,
-  createTheme,
-  Box,
-  IconButton,
-  Grid,
-} from "@mui/material";
+import React, { useMemo, useState } from "react";
+import { ThemeProvider, createTheme, useTheme, Grid } from "@mui/material";
+import { amber, deepOrange, grey } from "@mui/material/colors";
 import { useTranslation } from "react-i18next";
 import { Switch, Route, Redirect } from "react-router-dom";
-import BrightnessLowIcon from "@mui/icons-material/BrightnessLow";
-import Brightness3Icon from "@mui/icons-material/Brightness3";
-
 import HomePageLayouts from "./layouts/HomePageLayouts";
 import MainLayouts from "./layouts/MainLayouts";
 import BoxShowCase from "./components/BoxShowCase";
@@ -22,37 +13,34 @@ import Contacts from "./pages/Contacts";
 
 const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 
-const MyApp = () => {
-  const theme = useTheme();
-  const colorMode = useContext(ColorModeContext);
-  return (
-    <Box
-      sx={{
-        display: "flex",
-        width: "100%",
-        alignItems: "center",
-        justifyContent: "center",
-        bgcolor: "background.default",
-        color: "text.primary",
-        borderRadius: 1,
-        p: 3,
-      }}
-    >
-      {theme.palette.mode}
-      <IconButton
-        //sx={{ ml: 1 }}
-        onClick={colorMode.toggleColorMode}
-        //color="inherit"
-      >
-        {theme.palette.mode === "light" ? (
-          <BrightnessLowIcon />
-        ) : (
-          <Brightness3Icon />
-        )}
-      </IconButton>
-    </Box>
-  );
-};
+const getDesignTokens = (mode) => ({
+  palette: {
+    mode,
+    primary: {
+      ...amber,
+      ...(mode === "dark" && {
+        main: amber[300],
+      }),
+    },
+    ...(mode === "dark" && {
+      background: {
+        default: deepOrange[900],
+        paper: deepOrange[900],
+      },
+    }),
+    text: {
+      ...(mode === "light"
+        ? {
+            primary: grey[900],
+            secondary: grey[800],
+          }
+        : {
+            primary: "#fff",
+            secondary: grey[500],
+          }),
+    },
+  },
+});
 
 const App = () => {
   const { t, i18n } = useTranslation();
@@ -67,37 +55,7 @@ const App = () => {
     []
   );
 
-  const theme = useMemo(
-    () =>
-      createTheme({
-        palette: {
-          mode,
-        },
-        primary: {
-          light: "#80bdd9",
-          main: "#007ab3",
-          dark: "#302a2a",
-          contrastText: "#fff",
-        },
-        secondary: {
-          light: "#000",
-          main: "#000",
-          dark: "#000",
-          contrastText: "#000",
-        },
-        typography: {
-          allVariants: {
-            fontFamily: "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
-            textTransform: "none",
-          },
-
-          button: {
-            textTransform: "none",
-          },
-        },
-      }),
-    [mode]
-  );
+  const theme = getDesignTokens(mode);
 
   const handleClick = (lang) => {
     i18n.changeLanguage(lang);
@@ -117,7 +75,6 @@ const App = () => {
                 colorMode={colorMode}
               >
                 <Grid maxWidth="xl" display="flex" direction="column">
-                  <MyApp />
                   <BoxShowCase t={t} />
                   <MenuShowCases t={t} />
                   <OurJob t={t} />
