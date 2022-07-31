@@ -4,18 +4,29 @@
     color: #fff;
 }
 
-#showcase .showcaseContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    text-align: center;
+#showcase .showcaseGradient {
     height: 100%;
     padding: 0, 0rem;
     /* overlay effect */
     background: linear-gradient( to bottom, rgba(0, 122, 179, 0) 60%, rgba(0, 122, 179, 1));
     top: 80px;
     left: 0px;
+}
+
+#showcase .showcaseContent {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.wrap {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .lHeading {
@@ -47,4 +58,40 @@
     border: #007ab3;
     border-style: solid;
     border-width: 0.3rem;
+}
+
+@media (max-width: 600px) {
+    #showcase {
+        background: rgb(78, 24, 179) url(../../assets/contracosta.png) no-repeat center center/auto;
+    }
+    .wrap {
+        width: 100vh;
+    }
+    .lHeading {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+        line-height: 1.1;
+    }
+    .lead {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+    .btn {
+        display: inline-block;
+        color: #fff;
+        background: #007ab3;
+        padding: 0.5rem 2rem;
+        border: #007ab3;
+        border-radius: 1px;
+        border-style: solid;
+        border-width: 0.1rem;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    .btn:hover {
+        background: rgba(33, 36, 179, 0);
+        border: #007ab3;
+        border-style: solid;
+        border-width: 0.1rem;
+    }
 }

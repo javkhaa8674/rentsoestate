@@ -1,23 +1,122 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 @import url("http://fonts.cdnfonts.com/css/segoe-ui-4");
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+.dropdwn {
+    margin: 0 auto;
 }
 
-.Toolbar {
+.light {
     display: flex;
-    height: 80px;
+    font-family: "Segoe-UI";
+    height: 100px;
     position: sticky;
-    background-color: #f3f3f3;
-    color: #000;
-    justify-content: center;
+    background-color: #f3ebf6;
+    color: #053e79;
+    align-items: center;
+    top: 10;
+    justify-content: space-between;
+    z-index: 90;
+    padding: 1rem;
+}
+
+.dark {
+    display: flex;
+    font-family: "Segoe-UI";
+    height: 100px;
+    position: sticky;
+    background-color: #303030;
+    color: #f3ebf6;
     align-items: center;
     top: 0;
     justify-content: space-between;
     z-index: 90;
     padding: 1rem;
+}
+
+.light ul li a {
+    color: #053e79;
+}
+
+.dark ul li a {
+    color: #f3ebf6;
+}
+
+.logoContent {
+    display: flex;
+    align-items: center;
+}
+
+.logoContent .primaryText {
+    color: #e70404;
+    margin: 5px;
+}
+
+.logoContent .logo {
+    padding: 5px 0 0 30px;
+    width: 100px;
+    height: auto;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    float: right;
+    margin-right: 30px;
+}
+
+nav ul li {
+    position: relative;
+    list-style: none;
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    padding: 0 15px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    background: #c0bdbd;
+}
+
+nav ul ul {
+    position: absolute;
+    top: 40px;
+    display: none;
+}
+
+nav ul li:hover>ul {
+    display: block;
+}
+
+nav ul ul li {
+    width: 150px;
+    float: none;
+    display: list-item;
+    position: relative;
+    padding: 10px 0px;
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+
+/* 
+.wrapMenu {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.logoContent span {
+    margin: 5px;
+    color: #93cb52;
 }
 
 .Toolbar ul {
@@ -63,7 +162,13 @@
     font-family: "Segoe UI, Tahoma, Geneva, Verdana, sans-serif";
 }
 
-a {
+
+/* .LinkStyle {
+    text-decoration: none;
+} */
+
+
+/* a {
     text-decoration: none;
 }
 
@@ -75,7 +180,4 @@ color {
     background: #5e5959;
     color: #585353;
     color: #000;
-}
-
-
-/* utility class */
+} */

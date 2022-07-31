@@ -1,11 +1,11 @@
 import React, { useMemo, useState } from "react";
 import { ThemeProvider, createTheme, useTheme, Grid } from "@mui/material";
-import { amber, deepOrange, grey } from "@mui/material/colors";
+import { amber, deepOrange, grey, indigo } from "@mui/material/colors";
 import { useTranslation } from "react-i18next";
 import { Switch, Route, Redirect } from "react-router-dom";
 import HomePageLayouts from "./layouts/HomePageLayouts";
 import MainLayouts from "./layouts/MainLayouts";
-import BoxShowCase from "./components/BoxShowCase";
+import ShowCase from "./components/ShowCase";
 import MenuShowCases from "./components/MenuShowCases";
 import OurJob from "./components/OurJob";
 import Page404 from "./pages/404";
@@ -16,29 +16,27 @@ const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 const getDesignTokens = (mode) => ({
   palette: {
     mode,
-    primary: {
-      ...amber,
-      ...(mode === "dark" && {
-        main: amber[300],
-      }),
-    },
-    ...(mode === "dark" && {
-      background: {
-        default: deepOrange[900],
-        paper: deepOrange[900],
-      },
-    }),
-    text: {
-      ...(mode === "light"
-        ? {
-            primary: grey[900],
-            secondary: grey[800],
-          }
-        : {
+    ...(mode === "light"
+      ? {
+          primary: "#fff",
+          divider: grey[50],
+          text: {
+            primary: indigo[900],
+            secondary: indigo[800],
+          },
+        }
+      : {
+          primary: grey[900],
+          divider: "#000",
+          background: {
+            default: grey[900],
+            paper: "#fff",
+          },
+          text: {
             primary: "#fff",
             secondary: grey[500],
-          }),
-    },
+          },
+        }),
   },
 });
 
@@ -74,11 +72,11 @@ const App = () => {
                 t={t}
                 colorMode={colorMode}
               >
-                <Grid maxWidth="xl" display="flex" direction="column">
+                {/* <Grid maxWidth="xl" display="flex" direction="column">
                   <BoxShowCase t={t} />
                   <MenuShowCases t={t} />
                   <OurJob t={t} />
-                </Grid>
+                </Grid> */}
               </HomePageLayouts>
             )}
           />

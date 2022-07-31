@@ -4,3 +4,30 @@
     background-color: #007ab3;
     color: #fff;
 }
+
+.logoWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+.iconWrap {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+}
+
+.icon {
+    /* background-color: red; */
+    display: inline-block;
+    color: #fff;
+    background: #007ab3;
+    padding: 1rem 1rem;
+    border-radius: 50%;
+    border-style: solid;
+    border: #1612f0;
+    border-width: 0.1rem;
+}

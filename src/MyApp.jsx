@@ -1,102 +1,64 @@
-import React, { useState } from "react";
-import {
-  ThemeProvider,
-  createTheme,
-  Typography,
-  Box,
-  Button,
-  Grid,
-  Paper,
-} from "@mui/material";
+import React, { useState, useEffect, useContext } from "react";
+import { ThemeProvider, createTheme, Grid, Paper } from "@mui/material";
 import { indigo, grey } from "@mui/material/colors";
 import { useTranslation } from "react-i18next";
 import { Switch, Route, Redirect } from "react-router-dom";
-import HomePageLayouts from "./layouts/HomePageLayouts";
-import MainLayouts from "./layouts/MainLayouts";
-import BoxShowCase from "./components/BoxShowCase";
+import ShowCase from "./components/ShowCase";
 import MenuShowCases from "./components/MenuShowCases";
 import OurJob from "./components/OurJob";
 import Page404 from "./pages/404";
 import Contacts from "./pages/Contacts";
 import HomepageLayouts from "./layouts/HomePageLayouts";
-import MediaCard from "./components/Card";
-
-const getDesignTokens = (mode) => ({
-  palette: {
-    mode,
-    primary: {
-      ...grey,
-      ...(mode === "dark" && {
-        main: indigo[900],
-      }),
-    },
-    ...(mode === "dark" && {
-      background: {
-        default: grey[100],
-        paper: grey[900],
-      },
-    }),
-    text: {
-      ...(mode === "light"
-        ? {
-            primary: indigo[500],
-            secondary: grey[50],
-          }
-        : {
-            primary: "#fff",
-            secondary: grey[500],
-          }),
-    },
-  },
-});
+import ThemeContext from "./context/ThemeContext";
+import "./MyApp.css";
 
 const MyApp = (props) => {
-  const [mode, setMode] = useState("light");
-  const { t, i18n } = useTranslation();
+  const themeContext = useContext(ThemeContext);
+  const [theme, setTheme] = useState("light");
 
-  const handleMode = () => {
-    mode === "dark" ? setMode("light") : setMode("dark");
-  };
-
-  const handleClick = (lang) => {
-    i18n.changeLanguage(lang);
-  };
-  const theme = createTheme(getDesignTokens(mode));
+  useEffect(() => {
+    setTheme(themeContext.theme);
+    return () => {
+      setTheme("light");
+    };
+  }, [themeContext.theme]);
 
   return (
-    <ThemeProvider theme={theme}>
+    <div className={theme}>
       <Switch>
         <Route
           exact
           path="/"
           render={() => (
-            <HomepageLayouts
-              handleClick={handleClick}
-              handleMode={handleMode}
-              t={t}
-              mode={mode}
-            >
-              <Paper
-                maxWidth="xl"
-                sx={{
-                  bgcolor: "background.default",
-                  color: "text.primary",
-                }}
-                handleClick={handleClick}
-                handleMode={handleMode}
-                t={t}
-              >
-                <Grid maxWidth="xl" display="flex" direction="column">
-                  <BoxShowCase t={t} />
-                  <MenuShowCases t={t} />
-                  <OurJob t={t} />
-                </Grid>
-              </Paper>
+            <HomepageLayouts>
+              <ShowCase />
+              <MenuShowCases />
+              <OurJob />
             </HomepageLayouts>
           )}
         />
+        <Route
+          path="/contacts"
+          render={() => (
+            <HomepageLayouts>
+              <div>
+                <Contacts />
+              </div>
+            </HomepageLayouts>
+          )}
+        />
+        <Route
+          exact
+          path="/404"
+          render={() => (
+            <HomepageLayouts>
+              <Page404 />
+            </HomepageLayouts>
+          )}
+        />
+        <Redirect to="/404" />
       </Switch>
-    </ThemeProvider>
+    </div>
   );
 };
 

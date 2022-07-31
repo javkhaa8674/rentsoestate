@@ -3,14 +3,16 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./MyApp";
 import reportWebVitals from "./reportWebVitals";
-import "./index.scss";
+import { ThemeStore } from "./context/ThemeContext";
 import "./i18next.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Suspense fallback={<div>loading...</div>}>
     <BrowserRouter basename="/">
-      <App />
+      <ThemeStore>
+        <App />
+      </ThemeStore>
     </BrowserRouter>
   </Suspense>
 );

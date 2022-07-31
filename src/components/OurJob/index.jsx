@@ -1,49 +1,64 @@
 import React from "react";
-//mport css from "./style.module.css";
+//import css from "./style.module.css";
 import { green, pink, blue } from "@mui/material/colors";
-import { Avatar, Box, Typography, Paper } from "@mui/material";
+import { Avatar, Box, Typography, useTheme } from "@mui/material";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import LocalAtmIcon from "@mui/icons-material/LocalAtm";
 import HistoryEduIcon from "@mui/icons-material/HistoryEdu";
 
 const OurJob = (props) => {
+  const theme = useTheme();
+
   return (
-    <Paper
+    <Box
       sx={{
         display: "flex",
         flexDirection: "column",
+        bgcolor:
+          theme.palette.mode === "light" ? theme.palette.primary : "#303030",
       }}
     >
-      <Typography
-        variant="h2"
-        sx={{
-          textAlign: "center",
-          marginTop: "1rem",
-          marginBottom: "1rem",
-        }}
-      >
-        Бид юу хийдэг вэ?
-      </Typography>
+      <Box>
+        <Typography
+          sx={{
+            textAlign: "center",
+            fontSize: "2rem",
+            margin: "1.5rem",
+            lineHeight: "1.1",
+          }}
+        >
+          Бид юу хийдэг вэ?
+        </Typography>
+      </Box>
       <Box sx={{ display: "flex" }}>
         <Box
           sx={{
             display: "flex",
             flexDirection: "column",
+            justifyContent: "center",
             alignItems: "center",
             textAlign: "center",
           }}
         >
           <Avatar
             sx={{
-              bgcolor: pink[500],
               width: 56,
               height: 56,
               padding: "1rem",
+              bgcolor: pink[500],
+              marginBottom: "1rem",
             }}
           >
-            <AccountBalanceIcon />
+            <AccountBalanceIcon sx={{ width: 50, height: 50 }} />
           </Avatar>
-          <Typography variant="h4" sx={{ padding: "1rem" }}>
+          <Typography
+            sx={{
+              textAlign: "center",
+              fontSize: "2rem",
+              marginBottom: "0.75rem",
+              lineHeight: "1.1",
+            }}
+          >
             Үл хөдлөх худалдах
           </Typography>
           <Typography>
@@ -55,6 +70,7 @@ const OurJob = (props) => {
           sx={{
             display: "flex",
             flexDirection: "column",
+            justifyContent: "center",
             alignItems: "center",
             textAlign: "center",
           }}
@@ -65,11 +81,25 @@ const OurJob = (props) => {
               width: 56,
               height: 56,
               padding: "1rem",
+              marginBottom: "1rem",
             }}
           >
-            <LocalAtmIcon />
+            <LocalAtmIcon
+              sx={{
+                width: 50,
+                height: 50,
+              }}
+            />
           </Avatar>
-          <Typography variant="h4" sx={{ padding: "1rem" }}>
+          <Typography
+            variant="h4"
+            sx={{
+              textAlign: "center",
+              fontSize: "2rem",
+              marginBottom: "0.75rem",
+              lineHeight: "1.1",
+            }}
+          >
             Үл хөдлөх худалдах
           </Typography>
           <Typography>
@@ -81,6 +111,7 @@ const OurJob = (props) => {
           sx={{
             display: "flex",
             flexDirection: "column",
+            justifyContent: "center",
             alignItems: "center",
             textAlign: "center",
           }}
@@ -91,11 +122,25 @@ const OurJob = (props) => {
               width: 56,
               height: 56,
               padding: "1rem",
+              marginBottom: "1rem",
             }}
           >
-            <HistoryEduIcon />
+            <HistoryEduIcon
+              sx={{
+                width: 50,
+                height: 50,
+              }}
+            />
           </Avatar>
-          <Typography variant="h4" sx={{ padding: "1rem" }}>
+          <Typography
+            variant="h4"
+            sx={{
+              textAlign: "center",
+              fontSize: "2rem",
+              marginBottom: "0.75rem",
+              lineHeight: "1.1",
+            }}
+          >
             Үл хөдлөх худалдах
           </Typography>
           <Typography>
@@ -104,7 +149,7 @@ const OurJob = (props) => {
           </Typography>
         </Box>
       </Box>
-    </Paper>
+    </Box>
   );
 };
 
