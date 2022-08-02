@@ -1,207 +1,137 @@
-import React, { useState } from "react";
-import {
-  Paper,
-  Avatar,
-  Typography,
-  useTheme,
-  Box,
-  List,
-  ListItemButton,
-  ListItemIcon,
-  ListItem,
-  ListItemAvatar,
-  ListItemText,
-  Grid,
-  Button,
-  TabScrollButton,
-} from "@mui/material";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect, useContext } from "react";
+import { useInView } from "react-intersection-observer";
+import { Avatar } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import YoutubeIcon from "@mui/icons-material/YouTube";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import BrightnessLowIcon from "@mui/icons-material/BrightnessLow";
-import Brightness3Icon from "@mui/icons-material/Brightness3";
-
+import ScrollUpButton from "../ScrollUpButton";
+import ThemeContext from "../../context/ThemeContext";
+import Logo from "./../../assets/logo.png";
 import css from "./style.module.css";
 
-import Logo from "./../../assets/logo.png";
-import { Container } from "@mui/system";
+const Footer = (p) => {
+  const themeContext = useContext(ThemeContext);
+  const [theme, setTheme] = useState("light");
+  const { ref: myRef, inView: myRefIsVisible } = useInView();
 
-const Footer = (props) => {
-  const [langBtn, setLangBtn] = useState(false);
-  const [colorMode, setColorMode] = useState(false);
-
-  const handleClick = () => {
-    setLangBtn(!langBtn);
-    langBtn ? props.handleClick("en") : props.handleClick("mn");
-  };
-
-  const handleColorMode = () => {
-    props.handleMode();
-    setColorMode(!colorMode);
-  };
+  useEffect(() => {
+    setTheme(themeContext.theme);
+    return () => {
+      setTheme("light");
+    };
+  }, [themeContext.theme]);
 
   return (
-    <Grid
-      container
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        color: "#fff",
-        height: "auto",
-      }}
-    >
-      <Grid
-        container
-        display="flex"
-        justifyContent="space-around"
-        sx={{ bgcolor: "#053e79" }}
-      >
-        <Grid item xs={2} display="flex" direction="column">
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Avatar src={Logo} alt="RentsoEstate Logo" />
-            <Typography variant="h6" noWrap>
-              {props.t("CompanyName.1")}
-            </Typography>
-            <Typography variant="body2">
+    <div ref={myRef} className={theme === "light" ? css.light : css.dark}>
+      <div className={css.container}>
+        <div className={css.menuItems}>
+          <div className={css.logoContent}>
+            <span className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+              <img src={Logo} alt="logo" className={css.logo} />
+            </span>
+            <h1 className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+              {themeContext.t("CompanyName.1")}
+            </h1>
+            <p className={`${myRefIsVisible ? css.fadeUp : ""}`}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
               odio fugiat sequi illo id! Molestias eius porro asperiores
               dignissimos ab.
-            </Typography>
-          </Box>
-        </Grid>
-        <Grid item xs={8}>
-          <List sx={{ display: "flex" }}>
-            <ListItem>
-              <ListItemButton>
-                <Typography noWrap>{props.t("Menu.1")}</Typography>
-              </ListItemButton>
-            </ListItem>
-            <ListItem>
-              <ListItemButton>
-                <Typography noWrap>{props.t("Menu.2")}</Typography>
-              </ListItemButton>
-            </ListItem>
-            <ListItem>
-              <ListItemButton>
-                <Typography noWrap>{props.t("Menu.3")}</Typography>
-              </ListItemButton>
-            </ListItem>
-            {langBtn ? (
-              <ListItem>
-                <ListItemButton onClick={handleClick}>
-                  <Typography noWrap>English</Typography>
-                </ListItemButton>
-              </ListItem>
-            ) : (
-              <ListItem>
-                <ListItemButton onClick={handleClick}>
-                  <Typography noWrap>Монгол</Typography>
-                </ListItemButton>
-              </ListItem>
-            )}
-            <ListItem sx={{ padding: "0px" }}>
-              <ListItemButton>
-                <Avatar
-                  onClick={props.handleMode}
-                  sx={{
-                    bgcolor: "#053e79",
-                    border: "#fff",
-                    borderWidth: "0.1rem",
-                    borderRadius: "50%",
-                    borderStyle: "solid",
-                  }}
-                >
-                  {props.mode === "light" ? (
-                    <Brightness3Icon
-                      sx={{ color: "#fff", width: 30, height: 30 }}
-                    />
-                  ) : (
-                    <BrightnessLowIcon
-                      sx={{ color: "#fff", width: 30, height: 30 }}
-                    />
-                  )}
-                </Avatar>
-              </ListItemButton>
-            </ListItem>
-          </List>
-        </Grid>
-        <Grid item display="flex" xs={12} justifyContent="center">
-          <List sx={{ display: "flex", maxWidth: 360 }}>
-            <ListItem>
-              <ListItemText>
-                <Typography noWrap>Get Social</Typography>
-              </ListItemText>
-            </ListItem>
-            <ListItem sx={{ padding: "0px" }}>
-              <ListItemButton>
-                <Avatar
-                  sx={{
-                    bgcolor: "#053e79",
-                    border: "#299ace",
-                    borderWidth: "0.1rem",
-                    borderRadius: "50%",
-                    borderStyle: "solid",
-                  }}
-                >
-                  <FacebookIcon
-                    sx={{ color: "#299ace", width: 30, height: 30 }}
-                  />
-                </Avatar>
-              </ListItemButton>
-            </ListItem>
-            <ListItem sx={{ padding: "0px" }}>
-              <ListItemButton>
-                <Avatar
-                  sx={{
-                    bgcolor: "#053e79",
-                    border: "#299ace",
-                    borderWidth: "0.1rem",
-                    borderRadius: "50%",
-                    borderStyle: "solid",
-                  }}
-                >
-                  <YoutubeIcon
-                    sx={{ color: "#299ace", width: 30, height: 30 }}
-                  />
-                </Avatar>
-              </ListItemButton>
-            </ListItem>
-            <ListItem sx={{ padding: "0px" }}>
-              <ListItemButton>
-                <Avatar
-                  sx={{
-                    bgcolor: "#053e79",
-                    border: "#299ace",
-                    borderWidth: "0.1rem",
-                    borderRadius: "50%",
-                    borderStyle: "solid",
-                  }}
-                >
-                  <TwitterIcon
-                    sx={{ color: "#299ace", width: 30, height: 30 }}
-                  />
-                </Avatar>
-              </ListItemButton>
-            </ListItem>
-          </List>
-        </Grid>
-        <Grid item>
-          <TabScrollButton
-            orientation="vertical"
-            direction="left"
-            size="large"
-          />
-        </Grid>
-      </Grid>
-    </Grid>
+            </p>
+          </div>
+          <div className={css.menuItem}>
+            <ul>
+              <li className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+                <a href="/">{themeContext.t("Menu.1")}</a>
+              </li>
+              <li className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+                <a href="/question">{themeContext.t("Menu.2")}</a>
+              </li>
+              <li className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+                <a href="/broker">{themeContext.t("Menu.3")}</a>
+              </li>
+            </ul>
+            <div className={css.socialItems}>
+              <div className={css.item}>
+                <ul>
+                  <li className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+                    <h1>Get Social</h1>
+                  </li>
+                  <li className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+                    <a href="https://facebook.com">
+                      <Avatar
+                        sx={{
+                          bgcolor: "rgba(0,0,0,0)",
+                          width: 50,
+                          height: 50,
+                          border: "#2375cc",
+                          borderWidth: "2px",
+                          borderStyle: "solid",
+                        }}
+                      >
+                        <FacebookIcon
+                          fontSize="large"
+                          sx={{ color: "#2375cc" }}
+                        />
+                      </Avatar>
+                    </a>
+                  </li>
+                  <li className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+                    <a href="https://youtube.com">
+                      <Avatar
+                        sx={{
+                          bgcolor: "rgba(0,0,0,0)",
+                          width: 50,
+                          height: 50,
+                          border: "#2375cc",
+                          borderWidth: "2px",
+                          borderStyle: "solid",
+                        }}
+                      >
+                        <YoutubeIcon
+                          fontSize="large"
+                          sx={{ color: "#2375cc" }}
+                        />
+                      </Avatar>
+                    </a>
+                  </li>
+                  <li className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+                    <a href="https://twitter.com">
+                      <Avatar
+                        sx={{
+                          bgcolor: "rgba(0,0,0,0)",
+                          width: 50,
+                          height: 50,
+                          border: "#2375cc",
+                          borderWidth: "2px",
+                          borderStyle: "solid",
+                        }}
+                      >
+                        <TwitterIcon
+                          fontSize="large"
+                          sx={{ color: "#2375cc" }}
+                        />
+                      </Avatar>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className={css.copylight}>
+        <div className={css.scrollItems}>
+          <a href="#" className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+            <ScrollUpButton />
+          </a>
+          <h1 className={`${myRefIsVisible ? css.fadeUp : ""}`}>TOP</h1>
+        </div>
+        <div className={css.line} />
+        <h1 className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+          {themeContext.t("Copyright.p")}
+        </h1>
+      </div>
+    </div>
   );
 };
 

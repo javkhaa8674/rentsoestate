@@ -1,155 +1,74 @@
-import React from "react";
-//import css from "./style.module.css";
-import { green, pink, blue } from "@mui/material/colors";
-import { Avatar, Box, Typography, useTheme } from "@mui/material";
+import React, { useContext, useRef, useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import LocalAtmIcon from "@mui/icons-material/LocalAtm";
 import HistoryEduIcon from "@mui/icons-material/HistoryEdu";
+import ThemeContext from "./../../context/ThemeContext";
+import css from "./style.module.css";
+import { Avatar } from "@mui/material";
 
 const OurJob = (props) => {
-  const theme = useTheme();
+  const themeContext = useContext(ThemeContext);
+  const { ref: myRef, inView: myRefIsVisible } = useInView();
 
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        bgcolor:
-          theme.palette.mode === "light" ? theme.palette.primary : "#303030",
-      }}
+    <div
+      ref={myRef}
+      className={themeContext.theme === "light" ? css.light : css.dark}
     >
-      <Box>
-        <Typography
-          sx={{
-            textAlign: "center",
-            fontSize: "2rem",
-            margin: "1.5rem",
-            lineHeight: "1.1",
-          }}
-        >
-          Бид юу хийдэг вэ?
-        </Typography>
-      </Box>
-      <Box sx={{ display: "flex" }}>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            textAlign: "center",
-          }}
-        >
-          <Avatar
-            sx={{
-              width: 56,
-              height: 56,
-              padding: "1rem",
-              bgcolor: pink[500],
-              marginBottom: "1rem",
-            }}
-          >
-            <AccountBalanceIcon sx={{ width: 50, height: 50 }} />
-          </Avatar>
-          <Typography
-            sx={{
-              textAlign: "center",
-              fontSize: "2rem",
-              marginBottom: "0.75rem",
-              lineHeight: "1.1",
-            }}
-          >
-            Үл хөдлөх худалдах
-          </Typography>
-          <Typography>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta,
-            vitae?
-          </Typography>
-        </Box>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            textAlign: "center",
-          }}
-        >
-          <Avatar
-            sx={{
-              bgcolor: green[500],
-              width: 56,
-              height: 56,
-              padding: "1rem",
-              marginBottom: "1rem",
-            }}
-          >
-            <LocalAtmIcon
-              sx={{
-                width: 50,
-                height: 50,
-              }}
-            />
-          </Avatar>
-          <Typography
-            variant="h4"
-            sx={{
-              textAlign: "center",
-              fontSize: "2rem",
-              marginBottom: "0.75rem",
-              lineHeight: "1.1",
-            }}
-          >
-            Үл хөдлөх худалдах
-          </Typography>
-          <Typography>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta,
-            vitae?
-          </Typography>
-        </Box>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            textAlign: "center",
-          }}
-        >
-          <Avatar
-            sx={{
-              bgcolor: blue[500],
-              width: 56,
-              height: 56,
-              padding: "1rem",
-              marginBottom: "1rem",
-            }}
-          >
-            <HistoryEduIcon
-              sx={{
-                width: 50,
-                height: 50,
-              }}
-            />
-          </Avatar>
-          <Typography
-            variant="h4"
-            sx={{
-              textAlign: "center",
-              fontSize: "2rem",
-              marginBottom: "0.75rem",
-              lineHeight: "1.1",
-            }}
-          >
-            Үл хөдлөх худалдах
-          </Typography>
-          <Typography>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta,
-            vitae?
-          </Typography>
-        </Box>
-      </Box>
-    </Box>
+      <div className={css.mHeading}>
+        <div className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+          <h1>Бид юу хийдэг вэ?</h1>
+        </div>
+      </div>
+      <div className={css.items}>
+        <div className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+          <div className={css.item}>
+            <Avatar
+              className={css.icon4}
+              sx={{ bgcolor: "#58a2f0", width: 50, height: 50 }}
+            >
+              <AccountBalanceIcon fontSize="large" />
+            </Avatar>
+            <h1>Үл хөдлөх худалдах</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum,
+              rem?
+            </p>
+          </div>
+        </div>
+        <div className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+          <div className={css.item}>
+            <Avatar
+              className={css.icon4}
+              sx={{ bgcolor: "#58a2f0", width: 50, height: 50 }}
+            >
+              <HistoryEduIcon fontSize="large" />
+            </Avatar>
+            <h1>Үл хөдлөх худалдах</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum,
+              rem?
+            </p>
+          </div>
+        </div>
+        <div className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+          <div className={css.item}>
+            <Avatar
+              className={css.icon4}
+              sx={{ bgcolor: "#58a2f0", width: 50, height: 50 }}
+            >
+              <LocalAtmIcon fontSize="large" />
+            </Avatar>
+            <h1>Үл хөдлөх худалдах</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum,
+              rem?
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

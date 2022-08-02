@@ -1,20 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 @import url("http://fonts.cdnfonts.com/css/segoe-ui-4");
-.dropdwn {
-    margin: 0 auto;
-}
-
 .light {
     display: flex;
-    font-family: "Segoe-UI";
     height: 100px;
     position: sticky;
     background-color: #f3ebf6;
     color: #053e79;
     align-items: center;
-    top: 10;
+    top: 0;
     justify-content: space-between;
-    z-index: 90;
+    z-index: 1;
     padding: 1rem;
 }
 
@@ -32,21 +27,15 @@
     padding: 1rem;
 }
 
-.light ul li a {
-    color: #053e79;
-}
-
-.dark ul li a {
-    color: #f3ebf6;
-}
-
 .logoContent {
+    font-family: "Segoe-UI";
+    font-size: 2rem;
     display: flex;
     align-items: center;
 }
 
-.logoContent .primaryText {
-    color: #e70404;
+.logoContent span {
+    color: #35b41b;
     margin: 5px;
 }
 
@@ -57,45 +46,47 @@
 }
 
 nav ul {
+    display: flex;
     padding: 0;
     margin: 0;
     float: right;
     margin-right: 30px;
 }
 
-nav ul li {
+.ul li {
     position: relative;
     list-style: none;
-    display: inline-block;
+    display: flex;
 }
 
-nav ul li a {
+.light ul li a {
     display: block;
-    padding: 0 15px;
+    padding: 1rem 1rem;
     text-decoration: none;
     font-size: 20px;
+    color: #053e79;
+    transition: all 1s ease-in-out;
 }
 
-nav ul li a:hover {
-    background: #c0bdbd;
+.light ul li a:hover {
+    background: #7e7b80;
+    padding: 1rem 1rem;
+    transition: all 1s ease-in-out;
 }
 
-nav ul ul {
-    position: absolute;
-    top: 40px;
-    display: none;
-}
-
-nav ul li:hover>ul {
+.dark ul li a {
     display: block;
+    padding: 1rem 1rem;
+    text-decoration: none;
+    font-size: 20px;
+    color: #f3ebf6;
+    transition: all 1s ease-in-out;
 }
 
-nav ul ul li {
-    width: 150px;
-    float: none;
-    display: list-item;
-    position: relative;
-    padding: 10px 0px;
+.dark ul li a:hover {
+    background: #7e7b80;
+    padding: 1rem 1rem;
+    transition: all 1s ease-in-out;
 }
 
 .wrap {
@@ -105,79 +96,31 @@ nav ul ul li {
     align-items: center;
 }
 
+.fadeUp {
+    opacity: 0;
+    animation: fadeAnimation 0.2s forwards;
+}
 
-/* 
-.wrapMenu {
-    display: flex;
-    align-items: center;
+@keyframes fadeAnimation {
+    0% {
+        opacity: 0;
+        transform: translate(10px, 10px);
+    }
+    75% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
 }
 
 
-
-.logoContent span {
-    margin: 5px;
-    color: #93cb52;
-}
-
-.Toolbar ul {
-    display: flex;
-    align-items: center;
-    list-style: none;
-}
-
-.Toolbar ul select {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #302a2a;
-    color: #007ab3;
-    padding: 0.75rem;
-    margin: 0 0.25rem;
-    font-size: 1.2rem;
-    background: none;
-    border: none;
-}
-
-.Toolbar ul select option:hover {
-    background-color: #f3f3f3;
-    color: #007ab3;
-    padding: 0.75rem;
-    margin: 0 0.25rem;
-    font-size: 1.3rem;
-    transition: 0.2s ease-in;
-}
-
-.Toolbar ul li a {
-    color: #007ab3;
-    padding: 0.75rem;
-    margin: 0 0.25rem;
-    font-size: 1.3rem;
-}
-
-.Toolbar ul li a:hover {
-    background: #80bdd9;
-    border-radius: 5px;
-    transition: transform 250ms, opacity 400ms, ease-in;
-}
-
-.Toolbar body {
-    font-family: "Segoe UI, Tahoma, Geneva, Verdana, sans-serif";
-}
-
-
-/* .LinkStyle {
-    text-decoration: none;
+/* nav ul div:nth-child(1) {
+    animation-delay: 0.1s;
 } */
 
 
-/* a {
-    text-decoration: none;
-}
-
-p {
-    margin: 0.75rem, 0;
-}
-
-color {
-    background: #5e5959;
-    color: #585353;
-    color: #000;
+/* nav ul div:nth-child(2) {
+    animation-delay: 0.1s;
 } */

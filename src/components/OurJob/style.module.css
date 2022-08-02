@@ -1,43 +1,83 @@
 /* utility class */
 
 @media (min-width: 600px) {
-    .container {
+    .light {
+        font-family: "Segoe UI";
         display: flex;
         flex-direction: column;
+        color: #053e79;
+    }
+    .dark {
+        font-family: "Segoe UI";
+        display: flex;
+        flex-direction: column;
+        color: #f3ebf6;
     }
     .mHeading {
         text-align: center;
-        font-size: 2rem;
-        margin-bottom: 0.75rem;
         line-height: 1.1;
+        padding: 1.5rem;
     }
-    .py1 {
-        padding: 1.5rem 0;
-    }
-    .py2 {
-        padding: 2rem 0;
-    }
-    .py3 {
-        padding: 3rem 0;
-    }
-    /* Section Бид юу хийдэг вэ? */
-    .container .items {
+    .items {
         display: flex;
         flex-direction: row;
     }
-    .container .item {
+    .items .item {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
     }
-    .container .item h3 {
-        padding: 1rem 1rem;
+    .items .item h1 {
+        font-weight: 100;
     }
-    .TextPrimary {
-        color: #007ab3;
-        margin-right: 0.5rem;
+    .items .item p {
+        padding: 1rem;
+    }
+    .icon1 {
+        background: #58a2f0;
+        padding: 0.5rem;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+    }
+    .icon2 {
+        background: #1edd28;
+        padding: 0.5rem;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+    }
+    .icon3 {
+        background: #f51cd1;
+        padding: 0.5rem;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+    }
+    .fadeUp {
+        opacity: 0;
+        animation: fadeAnimation 1s forwards;
+    }
+    @keyframes fadeAnimation {
+        0% {
+            opacity: 0;
+            transform: translate(10px, 10px);
+        }
+        75% {
+            opacity: 0.2;
+        }
+        100% {
+            opacity: 1;
+            transform: translate(0px, 0px);
+        }
+    }
+    .items div:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+    .items div:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+    .items div:nth-child(3) {
+        animation-delay: 0.3s;
     }
 }
 

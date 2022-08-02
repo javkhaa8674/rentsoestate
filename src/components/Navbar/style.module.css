@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 @import url("http://fonts.cdnfonts.com/css/segoe-ui-4");
-.dropdwn {
-    margin: 0 auto;
-}
-
 .light {
     display: flex;
     flex-direction: row;
@@ -15,7 +11,6 @@
     align-items: center;
     top: 10;
     justify-content: flex-end;
-    z-index: 90;
     padding: 1rem;
 }
 
@@ -30,7 +25,6 @@
     align-items: center;
     top: 10;
     justify-content: flex-end;
-    z-index: 90;
     padding: 1rem;
 }
 
@@ -47,7 +41,6 @@
 nav ul {
     padding: 0;
     margin: 0;
-    /* float: right; */
 }
 
 nav ul li {
@@ -58,13 +51,21 @@ nav ul li {
 
 nav ul li a {
     display: block;
-    padding: 0 30px;
+    padding: 1rem;
     text-decoration: none;
     font-size: 20px;
 }
 
-nav ul li a:hover {
-    background: #c0bdbd;
+.light ul li a:hover {
+    background: #0753a5;
+    padding: 1rem 2rem;
+    transition: all 1s ease-in-out;
+}
+
+.dark ul li a:hover {
+    background: #303030;
+    padding: 1rem 2rem;
+    transition: all 1s ease-in-out;
 }
 
 nav ul ul {
@@ -83,4 +84,35 @@ nav ul ul li {
     display: list-item;
     position: relative;
     padding: 10px 0px;
+}
+
+.fadeUp {
+    opacity: 0;
+    animation: fadeAnimation 0.3s forwards;
+}
+
+@keyframes fadeAnimation {
+    0% {
+        opacity: 0;
+        transform: translate(10px, 10px);
+    }
+    75% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}
+
+nav ul div:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+nav ul div:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+nav ul div:nth-child(3) {
+    animation-delay: 0.3s;
 }

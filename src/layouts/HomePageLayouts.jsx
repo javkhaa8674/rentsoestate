@@ -9,7 +9,7 @@ const HomepageLayouts = (props) => {
       <Header />
       <Navbar />
       {props.children}
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
