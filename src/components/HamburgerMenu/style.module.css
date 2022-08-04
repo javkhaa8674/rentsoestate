@@ -1,5 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 body {
-    font-family: "Segoe UI";
+    font-family: "montserrat", roboto;
 }
 
 header {
@@ -50,15 +51,15 @@ header {
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
 }
 
-.icon1 .a {
+.a {
     transform: rotate(40deg);
 }
 
-.icon3 .b {
+.b {
     transform: rotate(-40deg);
 }
 
-.icon2 .c {
+.c {
     opacity: 0;
 }
 
@@ -104,6 +105,7 @@ nav ul li {
     line-height: 2.2;
     text-transform: uppercase;
     letter-spacing: 1.7px;
+    &:before {}
 }
 
 nav.show {
@@ -129,6 +131,20 @@ nav.show {
     opacity: 1;
 }
 
+@keyframes shotup {
+    0% {
+        transform: translateY(300%);
+        opacity: 0;
+    }
+    90% {
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
 .content {
     position: absolute;
     top: 50%;
@@ -142,18 +158,4 @@ nav.show {
     font-size: 70px;
     animation: shotup 600ms ease-in-out;
     animation-delay: 300ms;
-}
-
-@keyframes shotup {
-    0% {
-        transform: translateY(300%);
-        opacity: 0;
-    }
-    90% {
-        transform: translateY(-50px);
-    }
-    100% {
-        transform: translateY(0%);
-        opacity: 1;
-    }
 }

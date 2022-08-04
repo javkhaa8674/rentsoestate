@@ -1,27 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import css from "./style.module.css";
 
 const HamburgerMenu = () => {
+  const [active, setActive] = useState(false);
+
+  const handleActive = () => {
+    setActive(!active);
+  };
+  console.log("active", active);
   return (
     <header>
-      <div className={`${css.hamburgerIcon}${css.icon}`}>
-        <div className={`${css.icon1} ${css.a}`}></div>
-        <div className={`${css.icon2} ${css.b}`}></div>
-        <div className={`${css.icon3} ${css.c}`}></div>
-        <div className={css.clear}></div>
+      <div className="hamburger-icon" id="icon" onClick={handleActive}>
+        <div className="icon-1" id="a"></div>
+        <div className="icon-2" id="b"></div>
+        <div className="icon-3" id="c"></div>
+        <div className="clear"></div>
       </div>
-      <nav className={css.nav}>
+
+      <nav id="nav">
         <ul>
-          <li>Home</li>
+          <li>HOme</li>
           <li>About</li>
           <li>Contact</li>
           <li>Help</li>
         </ul>
       </nav>
-      <div className={`$css.darkBlue} ${css.blue}`}></div>
-      <section className={css.content}>
+
+      <div className={`${css.darkBlue}${active && css.blue}`}></div>
+
+      <section className="content">
         <h1>Hello We are animated!</h1>
-        <p className={css.small}>Lorem ipsum dolor sit amet</p>
+        <p className="small">Lorem ipsum dolor sit amet</p>
       </section>
     </header>
   );

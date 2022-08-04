@@ -10,6 +10,7 @@ import Page404 from "./pages/404";
 import Contacts from "./pages/Contacts";
 import HomepageLayouts from "./layouts/HomePageLayouts";
 import ThemeContext from "./context/ThemeContext";
+import HamburgerMenu from "./components/HamburgerMenu";
 import "./MyApp.css";
 
 const MyApp = (props) => {
@@ -25,7 +26,8 @@ const MyApp = (props) => {
 
   return (
     <div className={theme}>
-      <Switch>
+      <HamburgerMenu />
+      {/* <Switch>
         <Route
           exact
           path="/"
@@ -57,7 +59,7 @@ const MyApp = (props) => {
           )}
         />
         <Redirect to="/404" />
-      </Switch>
+      </Switch> */}
     </div>
   );
 };
