@@ -14,10 +14,15 @@ const ThemeContext = createContext({
 
 export const ThemeStore = (props) => {
   const [theme, setTheme] = useState("light");
+  const [active, setActive] = useState(false);
   const { t, i18n } = useTranslation();
 
   const toggleTheme = (theme) => {
     setTheme((curr) => (curr === "light" ? "dark" : "light"));
+  };
+
+  const handleActive = () => {
+    setActive(!active);
   };
 
   const handleLanguage = (lang) => {
@@ -25,7 +30,9 @@ export const ThemeStore = (props) => {
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, t, toggleTheme, handleLanguage }}>
+    <ThemeContext.Provider
+      value={{ theme, t, active, toggleTheme, handleLanguage, handleActive }}
+    >
       {props.children}
     </ThemeContext.Provider>
   );

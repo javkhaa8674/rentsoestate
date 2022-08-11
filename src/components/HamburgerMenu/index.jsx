@@ -1,38 +1,77 @@
-import React, { useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import ThemeContext from "./../../context/ThemeContext";
 import css from "./style.module.css";
 
-const HamburgerMenu = () => {
+const HamburgerMenu = (props) => {
+  const themeContext = useContext(ThemeContext);
   const [active, setActive] = useState(false);
+  const [theme, setTheme] = useState("light");
+  const { ref: myRef, inView: myRefIsVisible } = useInView();
 
-  const handleActive = () => {
-    setActive(!active);
-  };
-  console.log("active", active);
+  useEffect(() => {
+    setTheme(themeContext.theme);
+    return () => {
+      setTheme("light");
+    };
+  }, [themeContext.theme]);
+  useEffect(() => {
+    setActive(themeContext.active);
+  }, [themeContext.active]);
+
   return (
-    <header>
-      <div className="hamburger-icon" id="icon" onClick={handleActive}>
-        <div className="icon-1" id="a"></div>
-        <div className="icon-2" id="b"></div>
-        <div className="icon-3" id="c"></div>
-        <div className="clear"></div>
-      </div>
+    <div ref={myRef}>
+      <header>
+        <div className={css.hamburgerIcon} onClick={themeContext.handleActive}>
+          <div className={`${css.icon1} ${active && css.a}`}></div>
+          <div className={`${css.icon2} ${active && css.b}`}></div>
+          <div className={`${css.icon3} ${active && css.c}`}></div>
+          <div className={css.clear}></div>
+        </div>
 
-      <nav id="nav">
-        <ul>
-          <li>HOme</li>
-          <li>About</li>
-          <li>Contact</li>
-          <li>Help</li>
-        </ul>
-      </nav>
+        {/* <nav className={active ? css.show : ""}>
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Help</li>
+          </ul>
+        </nav> */}
 
-      <div className={`${css.darkBlue}${active && css.blue}`}></div>
+        <div
+          className={active ? `${css.darkBlue}${css.slide}` : css.darkBlue}
+        ></div>
 
-      <section className="content">
-        <h1>Hello We are animated!</h1>
-        <p className="small">Lorem ipsum dolor sit amet</p>
-      </section>
-    </header>
+        {/* <section
+          ref={myRef}
+          className={theme === "light" ? css.light : css.dark}
+        >
+          <ul>
+            <div className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+              <li>
+                <a href="/" className={css.wrap}>
+                  {themeContext.t("Menu.1")}
+                </a>
+              </li>
+            </div>
+            <div className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+              <li>
+                <a href="/question" className={css.wrap}>
+                  {themeContext.t("Menu.2")}
+                </a>
+              </li>
+            </div>
+            <div className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+              <li>
+                <a href="/broker" className={css.wrap}>
+                  {themeContext.t("Menu.3")}
+                </a>
+              </li>
+            </div>
+          </ul>
+        </section> */}
+      </header>
+    </div>
   );
 };
 
