@@ -39,7 +39,7 @@ const Footer = (p) => {
             </p>
           </div>
           <div className={css.menuItem}>
-            <ul>
+            <ul className={css.onlyMenu}>
               <li className={`${myRefIsVisible ? css.fadeUp : ""}`}>
                 <a href="/">{themeContext.t("Menu.1")}</a>
               </li>

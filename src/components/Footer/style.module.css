@@ -192,3 +192,24 @@
 .copylight h1 {
     animation-delay: 0.8s;
 }
+
+@media only screen and (max-width: 600px) {
+    .container {
+        margin-top: 1rem;
+    }
+    .menuItems {
+        display: flex;
+        flex-direction: column;
+    }
+    .onlyMenu {
+        flex-direction: column;
+    }
+    .menuItem ul {
+        justify-content: center;
+    }
+    .menuItem ul li {
+        font-size: 1rem;
+        font-weight: 300;
+        padding: 1rem;
+    }
+}

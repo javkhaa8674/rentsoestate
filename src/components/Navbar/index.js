@@ -47,9 +47,15 @@ const Navbar = (props) => {
         </div>
       </ul>
       <div className={css.hamburgerIcon} onClick={themeContext.handleActive}>
-        <div className={`${css.icon1} ${active && css.a}`}></div>
-        <div className={`${css.icon2} ${active && css.b}`}></div>
-        <div className={`${css.icon3} ${active && css.c}`}></div>
+        <div
+          className={active ? `${css.icon1}${" "}${css.a}` : css.icon1}
+        ></div>
+        <div
+          className={active ? `${css.icon2}${" "}${css.b}` : css.icon2}
+        ></div>
+        <div
+          className={active ? `${css.icon3}${" "}${css.c}` : css.icon3}
+        ></div>
         <div className={css.clear}></div>
       </div>
     </section>
