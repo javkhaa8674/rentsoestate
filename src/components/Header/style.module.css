@@ -1,247 +1,145 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 @import url("http://fonts.cdnfonts.com/css/segoe-ui-4");
-@media only screen and (min-width: 601px) {
-    .light {
-        display: flex;
-        flex-direction: row;
-        height: 100px;
-        position: sticky;
-        background-color: #f3ebf6;
-        color: #053e79;
-        align-items: center;
-        top: 0;
-        justify-content: space-between;
-        z-index: 1;
-        padding: 1rem;
-    }
-    .dark {
-        display: flex;
-        flex-direction: row;
-        height: 100px;
-        position: sticky;
-        background-color: #303030;
-        color: #f3ebf6;
-        align-items: center;
-        top: 0;
-        justify-content: space-between;
-        z-index: 1;
-        padding: 1rem;
-    }
-    .logoContent {
-        font-family: "Segoe-UI";
-        font-size: 2rem;
-        display: flex;
-        align-items: center;
-    }
-    .logoContent span {
-        color: #35b41b;
-        margin: 5px;
-    }
-    .logo {
-        /* padding: 5px 0 0 30px; */
-        width: 30px;
-        height: 30px;
-    }
-    .light ul {
-        display: flex;
-        padding: 0;
-        margin: 0;
-        float: right;
-        margin-right: 30px;
-    }
-    .light ul li {
-        position: relative;
-        list-style: none;
-        display: flex;
-    }
-    .light ul li a {
-        display: block;
-        padding: 1rem 1rem;
-        text-decoration: none;
-        font-size: 20px;
-        color: #053e79;
-        transition: all 1s ease-in-out;
-    }
-    .light ul li a:hover {
-        background: #7e7b80;
-        padding: 1rem 1rem;
-        transition: all 1s ease-in-out;
-    }
-    .dark ul {
-        display: flex;
-        padding: 0;
-        margin: 0;
-        float: right;
-        margin-right: 30px;
-    }
-    .dark ul li {
-        position: relative;
-        list-style: none;
-        display: flex;
-    }
-    .dark ul li a {
-        display: block;
-        padding: 1rem 1rem;
-        text-decoration: none;
-        font-size: 20px;
-        color: #f3ebf6;
-        transition: all 1s ease-in-out;
-    }
-    .dark ul li a:hover {
-        background: #7e7b80;
-        padding: 1rem 1rem;
-        transition: all 1s ease-in-out;
-    }
-    .wrap {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-    }
-    .fadeUp {
+.light {
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    background-color: #f3ebf6;
+    color: #053e79;
+    align-items: center;
+    top: 0;
+    justify-content: flex-end;
+    padding: 1rem;
+}
+
+.dark {
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    position: sticky;
+    background-color: #303030;
+    color: #f3ebf6;
+    align-items: center;
+    top: 0;
+    justify-content: flex-end;
+    z-index: 1;
+    padding: 1rem;
+}
+
+.logoContent {
+    font-family: "Segoe-UI";
+    font-size: 3vw;
+    display: flex;
+    align-items: center;
+}
+
+.logoContent span {
+    color: #35b41b;
+    margin: 5px;
+}
+
+.logo {
+    width: 4vw;
+    height: 4vw;
+}
+
+.light ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    float: right;
+    margin-right: 30px;
+}
+
+.light ul li {
+    position: relative;
+    list-style: none;
+    display: flex;
+}
+
+.light ul li a {
+    display: block;
+    padding: 1rem 1rem;
+    text-decoration: none;
+    font-size: 2vw;
+    color: #053e79;
+    transition: all 1s ease-in-out;
+}
+
+.dark ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    float: right;
+    margin-right: 30px;
+}
+
+.dark ul li {
+    position: relative;
+    list-style: none;
+    display: flex;
+}
+
+.dark ul li a {
+    display: block;
+    padding: 1rem 1rem;
+    text-decoration: none;
+    font-size: 2vw;
+    color: #f3ebf6;
+    transition: all 1s ease-in-out;
+}
+
+ul li a:hover {
+    transition: all 0.4s ease-in-out;
+    transform: scale(1.1);
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.fadeUp {
+    opacity: 0;
+    animation: fadeAnimation 0.2s forwards;
+}
+
+@keyframes fadeAnimation {
+    0% {
         opacity: 0;
-        animation: fadeAnimation 0.2s forwards;
+        transform: translate(10px, 10px);
     }
-    @keyframes fadeAnimation {
-        0% {
-            opacity: 0;
-            transform: translate(10px, 10px);
-        }
-        75% {
-            opacity: 0.2;
-        }
-        100% {
-            opacity: 1;
-            transform: translate(0px, 0px);
-        }
+    75% {
+        opacity: 0.2;
     }
-    nav ul div:nth-child(1) {
-        animation-delay: 0.1s;
-    }
-    nav ul div:nth-child(2) {
-        animation-delay: 0.1s;
+    100% {
+        opacity: 1;
+        transform: translate(0px, 0px);
     }
 }
 
+nav ul div:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+nav ul div:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
 @media only screen and (max-width: 600px) {
-    .light {
-        display: flex;
-        flex-direction: row;
-        height: 100px;
-        position: sticky;
-        background-color: #f3ebf6;
-        color: #053e79;
-        align-items: center;
-        top: 0;
-        justify-content: space-between;
-        z-index: 1;
-        padding: 1rem;
-    }
-    .dark {
-        display: flex;
-        flex-direction: row;
-        height: 100px;
-        position: sticky;
-        background-color: #303030;
-        color: #f3ebf6;
-        align-items: center;
-        top: 0;
-        justify-content: space-between;
-        z-index: 1;
-        padding: 1rem;
-    }
-    .logoContent {
-        font-family: "Segoe-UI";
-        font-size: 1rem;
-        display: flex;
-        align-items: center;
-    }
-    .logoContent span {
-        color: #35b41b;
-        margin: 5px;
-    }
-    .logo {
-        /* padding: 5px 0 0 30px; */
-        width: 30px;
-        height: 30px;
-    }
     .light ul {
-        display: flex;
-        padding: 0;
-        margin: 0;
-        float: right;
         margin-right: 5px;
-    }
-    .light ul li {
-        position: relative;
-        list-style: none;
-        display: flex;
     }
     .light ul li a {
-        display: block;
-        padding: 1rem 1rem;
-        text-decoration: none;
-        font-size: 10px;
-        color: #053e79;
-        transition: all 1s ease-in-out;
-    }
-    .light ul li a:hover {
-        background: #7e7b80;
-        padding: 1rem 1rem;
-        transition: all 1s ease-in-out;
+        font-size: 3vw;
     }
     .dark ul {
-        display: flex;
-        padding: 0;
-        margin: 0;
-        float: right;
         margin-right: 5px;
     }
-    .dark ul li {
-        position: relative;
-        list-style: none;
-        display: flex;
-    }
     .dark ul li a {
-        display: block;
-        padding: 1rem 1rem;
-        text-decoration: none;
-        font-size: 10px;
-        color: #f3ebf6;
-        transition: all 1s ease-in-out;
-    }
-    .dark ul li a:hover {
-        background: #7e7b80;
-        padding: 1rem 1rem;
-        transition: all 1s ease-in-out;
-    }
-    .wrap {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-    }
-    .fadeUp {
-        opacity: 0;
-        animation: fadeAnimation 0.2s forwards;
-    }
-    @keyframes fadeAnimation {
-        0% {
-            opacity: 0;
-            transform: translate(10px, 10px);
-        }
-        75% {
-            opacity: 0.2;
-        }
-        100% {
-            opacity: 1;
-            transform: translate(0px, 0px);
-        }
-    }
-    nav ul div:nth-child(1) {
-        animation-delay: 0.1s;
-    }
-    nav ul div:nth-child(2) {
-        animation-delay: 0.1s;
+        font-size: 3vw;
     }
 }

@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import ThemeContext from "./../../context/ThemeContext";
-import Logo from "./../../assets/logo.png";
+import HomeIcon from "@mui/icons-material/Home";
+import CallIcon from "@mui/icons-material/Call";
+import MailIcon from "@mui/icons-material/Mail";
 import css from "./style.module.css";
 
 const SideBar = (props) => {
@@ -12,17 +14,29 @@ const SideBar = (props) => {
   }, [themeContext.active]);
 
   return (
-    <header>
+    <header className={active ? css.Shadow : ""}>
       <nav className={active ? `${css.SideBar}${" "}${css.show}` : css.Sidebar}>
         <ul className={!active && css.hideList}>
           <li>
-            <a href="/">{themeContext.t("Menu.1")}</a>
+            <a href="/" className={css.wrap}>
+              <HomeIcon sx={{ marginRight: 1 }} />
+              {themeContext.t("Menu.1")}
+            </a>
           </li>
           <li>
-            <a href="/question">{themeContext.t("Menu.2")}</a>
+            <a href="tel:8665562570" className={css.wrap}>
+              <CallIcon sx={{ marginRight: 1 }} />
+              {themeContext.t("Menu.2")}
+            </a>
           </li>
           <li>
-            <a href="/broker">{themeContext.t("Menu.3")}</a>
+            <a
+              href="mailto:broker@rentsoestate.mn?subject=your title&body=TThe message"
+              className={css.wrap}
+            >
+              <MailIcon sx={{ marginRight: 1 }} />
+              {themeContext.t("Menu.3")}
+            </a>
           </li>
         </ul>
       </nav>

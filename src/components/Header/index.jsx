@@ -1,8 +1,8 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useContext, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import Logo from "./../../assets/logo.png";
-import css from "./style.module.css";
 import ThemeContext from "./../../context/ThemeContext";
+import css from "./style.module.css";
 
 const Header = (props) => {
   const [theme, setTheme] = useState("light");
@@ -26,13 +26,6 @@ const Header = (props) => {
 
   return (
     <nav ref={myRef} className={theme === "light" ? css.light : css.dark}>
-      <div className={`${myRefIsVisible ? css.fadeUp : ""}`}>
-        <h1 className={css.logoContent}>
-          <img src={Logo} alt="logo" className={css.logo} />
-          <span>{themeContext.t("CompanyName.2")}</span>
-          {themeContext.t("CompanyName.3")}
-        </h1>
-      </div>
       <ul>
         <div className={`${myRefIsVisible ? css.fadeUp : ""}`}>
           <li>

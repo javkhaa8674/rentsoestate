@@ -30,32 +30,91 @@
     text-align: center;
 }
 
+.wrap1 {
+    display: flex;
+}
+
+.wrap1 div {
+    margin: 0.5vw;
+}
+
+.wrap1 div a {
+    display: flex;
+}
+
 .wrap h1 {
-    font-size: 4rem;
-    margin-bottom: 0.75rem;
+    font-size: 4.5vw;
+    margin-bottom: 1vw;
     line-height: 1.1;
 }
 
 .wrap p {
-    font-size: 1.3rem;
-    margin-bottom: 2rem;
+    font-size: 1.5vw;
+    margin-bottom: 2vw;
 }
 
-.btn {
-    display: inline-block;
+.btn1 {
+    padding: 1vw;
+    align-items: center;
     color: #fff;
     background: #007ab3;
-    padding: 0.5rem 2rem;
     border: #007ab3;
     border-radius: 1px;
     border-style: solid;
     border-width: 0.3rem;
-    font-size: 1.5rem;
+    font-size: 1vw;
     text-decoration: none;
-    margin-bottom: 1rem;
+    transition: all 0.4s ease-in-out;
+    height: 5vw;
 }
 
-.btn:hover {
+.btn2 {
+    padding: 1vw;
+    align-items: center;
+    display: inline-block;
+    color: #fff;
+    background: #f5a30c;
+    border: #f5a30c;
+    border-radius: 1px;
+    border-style: solid;
+    border-width: 0.3rem;
+    font-size: 1vw;
+    text-decoration: none;
+    height: 5vw;
+    transition: all 0.4s ease-in-out;
+}
+
+.btn3 {
+    padding: 1vw;
+    align-items: center;
+    display: inline-block;
+    color: #fff;
+    background: #910f25;
+    border: #910f25;
+    border-radius: 1px;
+    border-style: solid;
+    border-width: 0.3rem;
+    font-size: 1vw;
+    text-decoration: none;
+    height: 5vw;
+    transition: all 0.4s ease-in-out;
+}
+
+.btn1:hover {
+    background: rgba(33, 36, 179, 0);
+    border: #007ab3;
+    border-style: solid;
+    border-width: 0.3rem;
+}
+
+.btn2:hover {
+    background: rgba(33, 36, 179, 0);
+    border: #007ab3;
+    border-style: solid;
+    border-width: 0.3rem;
+}
+
+.btn3:hover {
     background: rgba(33, 36, 179, 0);
     border: #007ab3;
     border-style: solid;
@@ -95,37 +154,60 @@
 
 @media (max-width: 600px) {
     #showcase {
-        background: rgb(78, 24, 179) url(../../assets/contracosta.png) no-repeat center center/auto;
         font-family: "Segoe UI";
+        background: rgb(78, 24, 179) url(../../assets/contracosta_small.png) no-repeat center center/cover;
+        height: 50vh;
+        color: #fff;
     }
     .wrap {
         width: 100vh;
     }
+    .wrap1 {
+        justify-content: center;
+    }
+    .wrap1 div {
+        margin: 4vw;
+    }
     .wrap h1 {
-        font-size: 4rem;
-        margin-bottom: 0.75rem;
+        font-size: 6vw;
+        margin-bottom: 3vw;
         line-height: 1.1;
     }
     .wrap p {
-        font-size: 1rem;
-        margin-bottom: 2rem;
+        font-size: 3vw;
+        margin-bottom: 1vw;
     }
-    .btn {
-        display: inline-block;
-        color: #fff;
-        background: #007ab3;
-        padding: 0.5rem 2rem;
-        border: #007ab3;
-        border-radius: 1px;
-        border-style: solid;
-        border-width: 0.1rem;
-        font-size: 1rem;
-        margin-bottom: 1rem;
+    .btn1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.4s ease-in-out;
+        width: 25vw;
+        height: 25vw;
+        padding: 0;
+        border-radius: 50%;
+        font-size: 2vw;
     }
-    .btn:hover {
-        background: rgba(33, 36, 179, 0);
-        border: #007ab3;
-        border-style: solid;
-        border-width: 0.1rem;
+    .btn2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.4s ease-in-out;
+        width: 25vw;
+        height: 25vw;
+        padding: 0;
+        border-radius: 50%;
+        font-size: 2vw;
+    }
+    .btn3 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.4s ease-in-out;
+        width: 25vw;
+        height: 25vw;
+        padding: 0;
+        border-radius: 50%;
+        font-size: 2vw;
     }
 }

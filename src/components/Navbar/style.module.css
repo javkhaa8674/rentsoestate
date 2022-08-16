@@ -10,22 +10,59 @@
         background-color: #053e79;
         color: #f3ebf6;
         align-items: center;
-        top: 10;
-        justify-content: flex-end;
-        padding: 1rem;
+        top: 0;
+        z-index: 1;
+        justify-content: space-around;
     }
     .dark {
         display: flex;
         flex-direction: row;
         font-family: "Segoe-UI";
-        height: 60px;
+        height: 100px;
         position: sticky;
         background-color: #646262;
         color: #f3ebf6;
         align-items: center;
-        top: 10;
-        justify-content: flex-end;
+        top: 0;
+        z-index: 1;
+        justify-content: space-between;
         padding: 1rem;
+    }
+    .logoContent {
+        font-family: "Segoe-UI";
+        font-size: 3vw;
+        display: flex;
+        align-items: center;
+    }
+    .logoContent span {
+        color: #35b41b;
+        margin: 5px;
+    }
+    .logo {
+        width: 4vw;
+        height: 4vw;
+    }
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+    }
+    nav ul li {
+        display: flex;
+        align-items: center;
+        position: relative;
+        list-style: none;
+        height: 100%;
+    }
+    nav ul li a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        height: 100%;
+        text-decoration: none;
+        font-size: 1.5vw;
     }
     .light ul li a {
         color: #f3ebf6;
@@ -34,27 +71,6 @@
     .dark ul li a {
         color: #f3ebf6;
         font-family: Tahoma;
-    }
-    section ul {
-        display: flex;
-        padding: 0;
-        margin: 0;
-    }
-    section ul li {
-        display: flex;
-        align-items: center;
-        position: relative;
-        list-style: none;
-        height: 100%;
-        display: inline-block;
-    }
-    section ul li a {
-        display: flex;
-        justify-content: center;
-        padding: 1rem;
-        height: 100%;
-        text-decoration: none;
-        font-size: 20px;
     }
     .light ul li a:hover {
         transition: all 0.4s ease-in-out;
@@ -82,13 +98,13 @@
             transform: translate(0px, 0px);
         }
     }
-    section ul div:nth-child(1) {
+    nav ul div:nth-child(1) {
         animation-delay: 0.1s;
     }
-    section ul div:nth-child(2) {
+    nav ul div:nth-child(2) {
         animation-delay: 0.2s;
     }
-    section ul div:nth-child(3) {
+    nav ul div:nth-child(3) {
         animation-delay: 0.3s;
     }
 }

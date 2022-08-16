@@ -1,122 +1,115 @@
-import React, { useMemo, useState } from "react";
-import { ThemeProvider, createTheme, useTheme, Grid } from "@mui/material";
-import { amber, deepOrange, grey, indigo } from "@mui/material/colors";
-import { useTranslation } from "react-i18next";
+import React, { useState, useEffect, useContext } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
-import HomePageLayouts from "./layouts/HomePageLayouts";
-import MainLayouts from "./layouts/MainLayouts";
 import ShowCase from "./components/ShowCase";
 import MenuShowCases from "./components/MenuShowCases";
-import OurJob from "./components/OurJob";
 import Page404 from "./pages/404";
-import Contacts from "./pages/Contacts";
-import Header from "./components/Header"
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Management from "./pages/Management";
+import Buy from "./pages/Buy";
+import Sell from "./pages/Sell";
+import Sale from "./pages/Sale";
+import HomepageLayouts from "./layouts/HomePageLayouts";
+import ThemeContext from "./context/ThemeContext";
+import "./App.css";
 
-const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
+const App = (props) => {
+  const themeContext = useContext(ThemeContext);
+  const [theme, setTheme] = useState("light");
 
-const getDesignTokens = (mode) => ({
-    palette: {
-        mode,
-        ...(mode === "light" ?
-            {
-                primary: "#fff",
-                divider: grey[50],
-                text: {
-                    primary: indigo[900],
-                    secondary: indigo[800],
-                },
-            } :
-            {
-                primary: grey[900],
-                divider: "#000",
-                background: {
-                    default: grey[900],
-                    paper: "#fff",
-                },
-                text: {
-                    primary: "#fff",
-                    secondary: grey[500],
-                },
-            }),
-    },
-});
-
-const App = () => {
-    const { t, i18n } = useTranslation();
-    const [mode, setMode] = useState("light");
-
-    const colorMode = useMemo(
-        () => ({
-            toggleColorMode: () => {
-                setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
-            },
-        }), []
-    );
-
-    const theme = getDesignTokens(mode);
-
-    const handleClick = (lang) => {
-        i18n.changeLanguage(lang);
+  useEffect(() => {
+    setTheme(themeContext.theme);
+    return () => {
+      setTheme("light");
     };
+  }, [themeContext.theme]);
 
-    return ( 
-    <ColorModeContext.Provider value={ colorMode }>
-        <ThemeProvider theme = { theme } className = "Container" >
-        <Header/> 
-        {
-            /* <Switch>
-                      <Route
-                        exact
-                        path="/"
-                        render={() => (
-                          <HomePageLayouts
-                            handleClick={handleClick}
-                            t={t}
-                            colorMode={colorMode}
-                          >
-                            {/* <Grid maxWidth="xl" display="flex" direction="column">
-                              <BoxShowCase t={t} />
-                              <MenuShowCases t={t} />
-                              <OurJob t={t} />
-                            </Grid> */
-        } 
-        </HomePageLayouts>
-    )
-}
-/> <
-Route
-path = "/contacts"
-render = {
-    () => ( <
-        HomePageLayouts handleClick = { handleClick }
-        t = { t } >
-        <
-        Contacts / >
-        <
-        /HomePageLayouts>
-    )
-}
-/> <
-Route
-exact
-path = "/404"
-render = {
-    () => ( <
-        MainLayouts handleClick = { handleClick }
-        t = { t } >
-        <
-        Page404 / >
-        <
-        /MainLayouts>
-    )
-}
-/> <
-Redirect to = "/404" / >
-    <
-    /Switch> */
-} <
-/ThemeProvider> <
-/ColorModeContext.Provider>
-);
+  return (
+    <div className={theme}>
+      <Switch>
+        <Route
+          exact
+          path="/"
+          render={() => (
+            <HomepageLayouts>
+              <ShowCase />
+              <MenuShowCases />
+            </HomepageLayouts>
+          )}
+        />
+        <Route
+          path="/about"
+          render={() => (
+            <HomepageLayouts>
+              <div>
+                <About />
+              </div>
+            </HomepageLayouts>
+          )}
+        />
+        <Route
+          path="/buy"
+          render={() => (
+            <HomepageLayouts>
+              <div>
+                <Buy />
+              </div>
+            </HomepageLayouts>
+          )}
+        />
+        <Route
+          path="/contacts"
+          render={() => (
+            <HomepageLayouts>
+              <div>
+                <Contact />
+              </div>
+            </HomepageLayouts>
+          )}
+        />
+        <Route
+          path="/management"
+          render={() => (
+            <HomepageLayouts>
+              <div>
+                <Management />
+              </div>
+            </HomepageLayouts>
+          )}
+        />
+        <Route
+          path="/sale"
+          render={() => (
+            <HomepageLayouts>
+              <div>
+                <Sale />
+              </div>
+            </HomepageLayouts>
+          )}
+        />
+        <Route
+          path="/sell"
+          render={() => (
+            <HomepageLayouts>
+              <div>
+                <Sell />
+              </div>
+            </HomepageLayouts>
+          )}
+        />
+        <Route
+          exact
+          path="/404"
+          render={() => (
+            <HomepageLayouts>
+              <Page404 />
+            </HomepageLayouts>
+          )}
+        />
+        <Redirect to="/404" />
+      </Switch>
+    </div>
+  );
 };
+
 export default App;
