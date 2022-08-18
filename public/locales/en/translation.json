@@ -6,7 +6,11 @@
     },
     "Menu": {
         "1": "Home",
+<<<<<<< HEAD
         "2": "Any Question?",
+=======
+        "2": "Any question?",
+>>>>>>> 1ee3a45f2bab212f432a79ccc5b53eb1a55a7d75
         "3": "broker@rentsoestate.mn"
     },
     "MenuURL": {
@@ -29,6 +33,7 @@
     "MenuShowCases": {
         "about": {
             "h2": "About real estate",
+<<<<<<< HEAD
             "p": "Read More"
         },
         "sell": {
@@ -46,6 +51,25 @@
         "management": {
             "h2": "Real estate management",
             "p": "Read More"
+=======
+            "p": "We will offer you the best price."
+        },
+        "sell": {
+            "h2": "Want to sell",
+            "p": "read more"
+        },
+        "buy": {
+            "h2": "Want to buy",
+            "p": "read more"
+        },
+        "sale": {
+            "h2": "Real estate sales",
+            "p": "read more"
+        },
+        "management": {
+            "h2": "Real estate management",
+            "p": "read more"
+>>>>>>> 1ee3a45f2bab212f432a79ccc5b53eb1a55a7d75
         }
     },
     "Copyright": {
@@ -53,12 +77,21 @@
     },
 
     "Address": {
+<<<<<<< HEAD
         "1": "Sukhbaatar district, 1st khoroo, Chin Van Chagdarjav street-29, Ikh Khulgun center, #4-3 Ulaanbaatar, Mongolia Tel: 88335696"
     },
     "Footer": {
         "Menu2": {
             "1": "Become a National Real Estate Agent?",
             "2": "By choosing National Properties...",
+=======
+        "1": "Sukhbaatar district, 1th khoroo, Chin Van Chagdarjav street-29, Ikh Khulgun center, #4-3, Ulaanbaatar, Mongolia Tel:88335696"
+    },
+    "Footer": {
+        "Menu2": {
+            "1": "Do you want to National Real Estate Agent?",
+            "2": "By choosing a national property...",
+>>>>>>> 1ee3a45f2bab212f432a79ccc5b53eb1a55a7d75
             "3": "Contact Us"
         }
     }
