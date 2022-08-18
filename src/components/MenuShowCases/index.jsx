@@ -1,8 +1,6 @@
 import React, { useContext } from "react";
 import { useInView } from "react-intersection-observer";
-
 import ThemeContext from "./../../context/ThemeContext";
-//import Media from "react-media";
 import css from "./style.module.css";
 import { Link } from "react-router-dom";
 

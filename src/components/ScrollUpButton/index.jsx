@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import KeyboardControlKeyIcon from "@mui/icons-material/KeyboardControlKey";
 import css from "./style.module.css";
 
 const ScrollUpButton = () => {
   const [showTopBtn, setShowTopBtn] = useState(false);
 
-  useEffect(() => {
+  const handleButton = () => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 400) {
         setShowTopBtn(true);
@@ -13,21 +13,15 @@ const ScrollUpButton = () => {
         setShowTopBtn(false);
       }
     });
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 400) {
-        setShowTopBtn(true);
-      } else {
-        setShowTopBtn(false);
-      }
-    });
-  }, []);
+  };
 
   return (
-    <div className="top-to-btm">
-      <KeyboardControlKeyIcon className="icon-position icon-style" />
+    <div className={css.showTopBtn} onClick={handleButton}>
+      <KeyboardControlKeyIcon
+        className={
+          showTopBtn ? `${css.iconPosition}${css.iconStyle}` : css.iconStyle
+        }
+      />
     </div>
   );
 };

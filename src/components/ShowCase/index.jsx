@@ -16,7 +16,7 @@ const ShowCase = (props) => {
                 {themeContext.t("ShowCaseText.h1")}
               </h1>
               <p className={`${myRefIsVisible ? css.fadeUp : ""}`}>
-                {themeContext.t("ShowCaseText.p")}
+                {themeContext.t("ShowCaseText.p1")}
               </p>
               <div className={css.wrap1}>
                 <div className={`${myRefIsVisible ? css.fadeUp : ""}`}>
