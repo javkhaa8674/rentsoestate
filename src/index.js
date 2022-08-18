@@ -8,7 +8,7 @@ import "./i18next.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter basename="/rentsoestate/">
+  <BrowserRouter basename="/">
     <Suspense fallback={<div>loading...</div>}>
       <ThemeStore>
         <App />
