@@ -8,13 +8,13 @@ import "./i18next.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <Suspense fallback={<div>loading...</div>}>
-    <BrowserRouter basename="/rentsoestate/">
+  <BrowserRouter basename="/rentsoestate/">
+    <Suspense fallback={<div>loading...</div>}>
       <ThemeStore>
         <App />
       </ThemeStore>
-    </BrowserRouter>
-  </Suspense>
+    </Suspense>
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
