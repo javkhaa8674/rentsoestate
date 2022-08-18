@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/rentsoestate/static/css/main.7953a849.css",
-    "main.js": "/rentsoestate/static/js/main.30f84e77.js",
-    "static/js/787.9ecc5072.chunk.js": "/rentsoestate/static/js/787.9ecc5072.chunk.js",
-    "static/media/contracosta.png": "/rentsoestate/static/media/contracosta.3e4d10c5ae33d7b11547.png",
-    "static/media/logo.png": "/rentsoestate/static/media/logo.8bbe10ceb5a3e9762b02.png",
-    "static/media/DSC_2970.JPG": "/rentsoestate/static/media/DSC_2970.ca555720efbc16cd8085.JPG",
-    "static/media/DSC_2973.JPG": "/rentsoestate/static/media/DSC_2973.90f4ad8f239d82d2a44c.JPG",
-    "static/media/contracosta_small.png": "/rentsoestate/static/media/contracosta_small.39acdad28c787c38a323.png",
-    "index.html": "/rentsoestate/index.html",
-    "static/media/getFetch.cjs": "/rentsoestate/static/media/getFetch.c780682470504fffbd04.cjs",
-    "main.7953a849.css.map": "/rentsoestate/static/css/main.7953a849.css.map",
-    "main.30f84e77.js.map": "/rentsoestate/static/js/main.30f84e77.js.map",
-    "787.9ecc5072.chunk.js.map": "/rentsoestate/static/js/787.9ecc5072.chunk.js.map"
+    "main.css": "/static/css/main.caa34936.css",
+    "main.js": "/static/js/main.03827d35.js",
+    "static/js/787.9ecc5072.chunk.js": "/static/js/787.9ecc5072.chunk.js",
+    "static/media/contracosta.png": "/static/media/contracosta.3e4d10c5ae33d7b11547.png",
+    "static/media/logo.png": "/static/media/logo.8bbe10ceb5a3e9762b02.png",
+    "static/media/DSC_2970.JPG": "/static/media/DSC_2970.ca555720efbc16cd8085.JPG",
+    "static/media/DSC_2973.JPG": "/static/media/DSC_2973.90f4ad8f239d82d2a44c.JPG",
+    "static/media/contracosta_small.png": "/static/media/contracosta_small.39acdad28c787c38a323.png",
+    "index.html": "/index.html",
+    "static/media/getFetch.cjs": "/static/media/getFetch.c780682470504fffbd04.cjs",
+    "main.caa34936.css.map": "/static/css/main.caa34936.css.map",
+    "main.03827d35.js.map": "/static/js/main.03827d35.js.map",
+    "787.9ecc5072.chunk.js.map": "/static/js/787.9ecc5072.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7953a849.css",
-    "static/js/main.30f84e77.js"
+    "static/css/main.caa34936.css",
+    "static/js/main.03827d35.js"
   ]
 }
