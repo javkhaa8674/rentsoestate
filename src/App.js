@@ -9,6 +9,7 @@ import Management from "./pages/Management";
 import Buy from "./pages/Buy";
 import Sell from "./pages/Sell";
 import Sale from "./pages/Sale";
+import TestPage from "./pages/TestPage";
 import HomepageLayouts from "./layouts/HomePageLayouts";
 import ThemeContext from "./context/ThemeContext";
 import "./App.css";
@@ -106,6 +107,16 @@ const App = (props) => {
             </HomepageLayouts>
           )}
         />
+        <Route
+          exact
+          path="/rentsoestate"
+          render={() => (
+            <HomepageLayouts>
+              <TestPage />
+            </HomepageLayouts>
+          )}
+        />
+
         <Redirect to="/404" />
       </Switch>
     </div>
