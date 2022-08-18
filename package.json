@@ -2,7 +2,7 @@
     "name": "rentsoestate",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://cryptojavkhaa.github.io/rentsoestate",
+    "homepage": "https://cryptojavkhaa.github.io",
     "dependencies": {
         "@emotion/react": "^11.9.3",
         "@emotion/styled": "^11.9.3",
