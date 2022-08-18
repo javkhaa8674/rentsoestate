@@ -1,0 +1,65 @@
+{
+    "CompanyName": {
+        "1": "Rents'O Estate",
+        "2": "Rents'O",
+        "3": "Estate"
+    },
+    "Menu": {
+        "1": "Home",
+        "2": "Any question?",
+        "3": "broker@rentsoestate.mn"
+    },
+    "MenuURL": {
+        "1": "/",
+        "2": "/question",
+        "3": "/broker",
+        "4": "/about",
+        "5": "/sell",
+        "6": "/buy",
+        "7": "/sale",
+        "8": "/management"
+    },
+    "ShowCaseText": {
+        "h1": "We provide comprehensive real estate services in Mongolia",
+        "h2": "3 easy steps to get our services",
+        "p1": "National real estate",
+        "p2": "Mongol OJU",
+        "p3": "National Real Estate Development Association"
+    },
+    "MenuShowCases": {
+        "about": {
+            "h2": "About real estate",
+            "p": "We will offer you the best price."
+        },
+        "sell": {
+            "h2": "Want to sell",
+            "p": "read more"
+        },
+        "buy": {
+            "h2": "Want to buy",
+            "p": "read more"
+        },
+        "sale": {
+            "h2": "Real estate sales",
+            "p": "read more"
+        },
+        "management": {
+            "h2": "Real estate management",
+            "p": "read more"
+        }
+    },
+    "Copyright": {
+        "p": "© 2022 Rents'O Estate LLC • All right reserved"
+    },
+
+    "Address": {
+        "1": "Sukhbaatar district, 1th khoroo, Chin Van Chagdarjav street-29, Ikh Khulgun center, #4-3, Ulaanbaatar, Mongolia Tel:88335696"
+    },
+    "Footer": {
+        "Menu2": {
+            "1": "Do you want to National Real Estate Agent?",
+            "2": "By choosing a national property...",
+            "3": "Contact Us"
+        }
+    }
+}
