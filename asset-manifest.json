@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/rentsoestate/static/css/main.7953a849.css",
-    "main.js": "/rentsoestate/static/js/main.79e49300.js",
+    "main.css": "/rentsoestate/static/css/main.e7b3bcc3.css",
+    "main.js": "/rentsoestate/static/js/main.f25ebbd4.js",
     "static/js/787.9ecc5072.chunk.js": "/rentsoestate/static/js/787.9ecc5072.chunk.js",
     "static/media/contracosta.png": "/rentsoestate/static/media/contracosta.3e4d10c5ae33d7b11547.png",
     "static/media/logo.png": "/rentsoestate/static/media/logo.8bbe10ceb5a3e9762b02.png",
@@ -10,12 +10,12 @@
     "static/media/contracosta_small.png": "/rentsoestate/static/media/contracosta_small.39acdad28c787c38a323.png",
     "index.html": "/rentsoestate/index.html",
     "static/media/getFetch.cjs": "/rentsoestate/static/media/getFetch.c780682470504fffbd04.cjs",
-    "main.7953a849.css.map": "/rentsoestate/static/css/main.7953a849.css.map",
-    "main.79e49300.js.map": "/rentsoestate/static/js/main.79e49300.js.map",
+    "main.e7b3bcc3.css.map": "/rentsoestate/static/css/main.e7b3bcc3.css.map",
+    "main.f25ebbd4.js.map": "/rentsoestate/static/js/main.f25ebbd4.js.map",
     "787.9ecc5072.chunk.js.map": "/rentsoestate/static/js/787.9ecc5072.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7953a849.css",
-    "static/js/main.79e49300.js"
+    "static/css/main.e7b3bcc3.css",
+    "static/js/main.f25ebbd4.js"
   ]
 }
