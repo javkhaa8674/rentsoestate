@@ -34,6 +34,13 @@ const Footer = (p) => {
             </h1>
             <ul>
               <li className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+                <a href="https://nationalrealestate.mn">
+                  <span className={css.textPrimary}>
+                    {themeContext.t("ShowCaseText.p3")}
+                  </span>
+                </a>
+              </li>
+              <li className={`${myRefIsVisible ? css.fadeUp : ""}`}>
                 <a href="https://rentsoestate.mn">
                   <span className={css.textPrimary}>
                     {themeContext.t("ShowCaseText.p1")}
@@ -47,18 +54,11 @@ const Footer = (p) => {
                   </span>
                 </a>
               </li>
-              <li className={`${myRefIsVisible ? css.fadeUp : ""}`}>
-                <a href="https://nationalrealestate.mn">
-                  <span className={css.textPrimary}>
-                    {themeContext.t("ShowCaseText.p3")}
-                  </span>
-                </a>
-              </li>
             </ul>
           </div>
           <div className={css.item}>
             <h1 className={`${myRefIsVisible ? css.fadeUp : ""}`}>
-              {themeContext.t("Footer.Menu2.1")}
+              {themeContext.t("Footer.Menu2.0")}
             </h1>
             <ul>
               <li className={`${myRefIsVisible ? css.fadeUp : ""}`}>
@@ -168,6 +168,9 @@ const Footer = (p) => {
           </h1>
           <p className={`${myRefIsVisible ? css.fadeUp : ""}`}>
             {themeContext.t("Address.1")}
+          </p>
+          <p className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+            {themeContext.t("Address.2")}
           </p>
         </div>
       </div>

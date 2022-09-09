@@ -18,9 +18,7 @@ const ScrollUpButton = () => {
   return (
     <div className={css.showTopBtn} onClick={handleButton}>
       <KeyboardControlKeyIcon
-        className={
-          showTopBtn ? `${css.iconPosition}${css.iconStyle}` : css.iconStyle
-        }
+        className={showTopBtn ? css.iconStyle : css.iconStyle}
       />
     </div>
   );

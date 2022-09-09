@@ -7,7 +7,7 @@
 
 #showcase .showcaseGradient {
     height: 100%;
-    padding: 0, 0rem;
+    padding: 0;
     /* overlay effect */
     background: linear-gradient( to bottom, rgba(0, 122, 179, 0) 60%, rgba(0, 122, 179, 1));
     top: 80px;
@@ -31,7 +31,9 @@
 }
 
 .wrap1 {
-    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: flex-start;
 }
 
 .wrap1 div {
@@ -50,75 +52,54 @@
 
 .wrap p {
     font-size: 1.5vw;
-    margin-bottom: 2vw;
+    margin-bottom: 1vw;
 }
 
 .btn1 {
-    padding: 1vw;
     align-items: center;
-    color: #fff;
-    background: #007ab3;
-    border: #007ab3;
-    border-radius: 1px;
-    border-style: solid;
-    border-width: 0.3rem;
-    font-size: 1vw;
+    color: rgb(221, 21, 21);
+    font-size: 1.5vw;
     text-decoration: none;
     transition: all 0.4s ease-in-out;
     height: 5vw;
 }
 
 .btn2 {
-    padding: 1vw;
     align-items: center;
     display: inline-block;
-    color: #fff;
-    background: #f5a30c;
-    border: #f5a30c;
-    border-radius: 1px;
-    border-style: solid;
-    border-width: 0.3rem;
-    font-size: 1vw;
+    color: rgb(9, 189, 114);
+    font-size: 1.5vw;
     text-decoration: none;
     height: 5vw;
     transition: all 0.4s ease-in-out;
 }
 
 .btn3 {
-    padding: 1vw;
     align-items: center;
     display: inline-block;
-    color: #fff;
-    background: #910f25;
-    border: #910f25;
-    border-radius: 1px;
-    border-style: solid;
-    border-width: 0.3rem;
-    font-size: 1vw;
+    color: rgb(245, 151, 11);
+    font-size: 1.5vw;
     text-decoration: none;
     height: 5vw;
     transition: all 0.4s ease-in-out;
 }
 
 .btn1:hover {
-    background: rgba(33, 36, 179, 0);
-    border: #007ab3;
-    border-style: solid;
-    border-width: 0.3rem;
+    transition: all 0.4s ease-in-out;
+    transform: scale(1.1);
+    background: rgba(221, 21, 21, 0.4);
 }
 
 .btn2:hover {
-    background: rgba(33, 36, 179, 0);
-    border: #007ab3;
-    border-style: solid;
-    border-width: 0.3rem;
+    transition: all 0.4s ease-in-out;
+    transform: scale(1.1);
+    background: rgba(9, 189, 114, 0.4);
 }
 
 .btn3:hover {
-    background: rgba(33, 36, 179, 0);
-    border: #007ab3;
-    border-style: solid;
-    border-width: 0.3rem;
+    transition: all 0.4s ease-in-out;
+    transform: scale(1.1);
+    background: rgba(245, 151, 11, 0.4);
 }
 
 .fadeUp {

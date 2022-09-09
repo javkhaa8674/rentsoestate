@@ -28,11 +28,13 @@ const Navbar = (props) => {
     <nav ref={myRef} className={theme === "light" ? css.light : css.dark}>
       <div className={css.hideOnModile}>
         <div className={`${myRefIsVisible ? css.fadeUp : ""}`}>
-          <h1 className={css.logoContent}>
+          <div className={css.wrapLogo}>
             <img src={Logo} alt="logo" className={css.logo} />
-            <span>{themeContext.t("CompanyName.2")}</span>
-            {themeContext.t("CompanyName.3")}
-          </h1>
+            <h1 className={css.logoContent}>
+              <span>{themeContext.t("CompanyName.0")}</span>
+              <h4>{themeContext.t("CompanyName.1")}</h4>
+            </h1>
+          </div>
         </div>
       </div>
       <div className={css.hamburgerIcon} onClick={themeContext.handleActive}>
