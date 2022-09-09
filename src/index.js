@@ -5,10 +5,11 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ThemeStore } from "./context/ThemeContext";
 import "./i18next.js";
+import Spinner from "./components/Spinner";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <Suspense fallback={<div>loading...</div>}>
+  <Suspense fallback={<Spinner />}>
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <ThemeStore>
         <App />
