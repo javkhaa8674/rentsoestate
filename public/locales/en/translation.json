@@ -59,16 +59,10 @@
     },
     "Footer": {
         "Menu2": {
-            "1": "Join National Real Estate!",
-            "2": "By choosing National Properties..."
-        },
-        "Footer": {
-            "Menu2": {
-                "0": "National Real Estate Agent",
-                "1": "Do you want to National Real Estate Agent?",
-                "2": "if you choose National Real Estate ...",
-                "3": "Contact Us"
-            }
+            "0": "National Real Estate Agent",
+            "1": "Do you want to National Real Estate Agent?",
+            "2": "if you choose National Real Estate ...",
+            "3": "Contact Us"
         }
     }
 }
