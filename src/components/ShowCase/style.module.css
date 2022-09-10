@@ -151,44 +151,35 @@
     }
     .wrap h1 {
         font-size: 6vw;
-        margin-bottom: 3vw;
+        margin-bottom: 2vw;
         line-height: 1.1;
     }
     .wrap p {
         font-size: 3vw;
-        margin-bottom: 1vw;
+        margin-bottom: 2vw;
     }
     .btn1 {
         display: flex;
         align-items: center;
         justify-content: center;
         transition: all 0.4s ease-in-out;
-        width: 25vw;
-        height: 25vw;
-        padding: 0;
-        border-radius: 50%;
-        font-size: 2vw;
+        font-size: 3vw;
+        background-color: rgba(255, 255, 255, 0.2);
     }
     .btn2 {
         display: flex;
         align-items: center;
         justify-content: center;
         transition: all 0.4s ease-in-out;
-        width: 25vw;
-        height: 25vw;
-        padding: 0;
-        border-radius: 50%;
-        font-size: 2vw;
+        font-size: 3vw;
+        background-color: rgba(255, 255, 255, 0.2);
     }
     .btn3 {
         display: flex;
         align-items: center;
         justify-content: center;
         transition: all 0.4s ease-in-out;
-        width: 25vw;
-        height: 25vw;
-        padding: 0;
-        border-radius: 50%;
-        font-size: 2vw;
+        font-size: 3vw;
+        background-color: rgba(255, 255, 255, 0.2);
     }
 }

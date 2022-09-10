@@ -29,25 +29,25 @@ const Footer = (p) => {
       <div className={css.container}>
         <div className={css.menuItems}>
           <div className={css.item}>
-            <h1 className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+            <h1 className={`${myRefIsVisible ? css.fadeUp : css.invisible}`}>
               {themeContext.t("ShowCaseText.h2")}
             </h1>
             <ul>
-              <li className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+              <li className={`${myRefIsVisible ? css.fadeUp : css.invisible}`}>
                 <a href="https://nationalrealestate.mn">
                   <span className={css.textPrimary}>
                     {themeContext.t("ShowCaseText.p3")}
                   </span>
                 </a>
               </li>
-              <li className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+              <li className={`${myRefIsVisible ? css.fadeUp : css.invisible}`}>
                 <a href="https://rentsoestate.mn">
                   <span className={css.textPrimary}>
                     {themeContext.t("ShowCaseText.p1")}
                   </span>
                 </a>
               </li>
-              <li className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+              <li className={`${myRefIsVisible ? css.fadeUp : css.invisible}`}>
                 <a href="https://mongoloju.mn">
                   <span className={css.textPrimary}>
                     {themeContext.t("ShowCaseText.p2")}
@@ -57,14 +57,14 @@ const Footer = (p) => {
             </ul>
           </div>
           <div className={css.item}>
-            <h1 className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+            <h1 className={`${myRefIsVisible ? css.fadeUp : css.invisible}`}>
               {themeContext.t("Footer.Menu2.0")}
             </h1>
             <ul>
-              <li className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+              <li className={`${myRefIsVisible ? css.fadeUp : css.invisible}`}>
                 <a href="/">{themeContext.t("Footer.Menu2.1")}</a>
               </li>
-              <li className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+              <li className={`${myRefIsVisible ? css.fadeUp : css.invisible}`}>
                 <a href="/">{themeContext.t("Footer.Menu2.2")}</a>
               </li>
             </ul>
@@ -72,11 +72,11 @@ const Footer = (p) => {
         </div>
         <div className={css.socialItems}>
           <div className={css.item}>
-            <h1 className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+            <h1 className={`${myRefIsVisible ? css.fadeUp : css.invisible}`}>
               {themeContext.t("Footer.Menu2.3")}
             </h1>
             <ul>
-              <li className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+              <li className={`${myRefIsVisible ? css.fadeUp : css.invisible}`}>
                 <a href="/">
                   <Avatar
                     sx={{
@@ -92,7 +92,7 @@ const Footer = (p) => {
                   </Avatar>
                 </a>
               </li>
-              <li className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+              <li className={`${myRefIsVisible ? css.fadeUp : css.invisible}`}>
                 <a href="tel:8665562570">
                   <Avatar
                     sx={{
@@ -108,7 +108,7 @@ const Footer = (p) => {
                   </Avatar>
                 </a>
               </li>
-              <li className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+              <li className={`${myRefIsVisible ? css.fadeUp : css.invisible}`}>
                 <a href="mailto:broker@rentsoestate.mn?subject=your title&body=TThe message">
                   <Avatar
                     sx={{
@@ -124,7 +124,7 @@ const Footer = (p) => {
                   </Avatar>
                 </a>
               </li>
-              <li className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+              <li className={`${myRefIsVisible ? css.fadeUp : css.invisible}`}>
                 <a href="https://facebook.com">
                   <Avatar
                     sx={{
@@ -140,7 +140,7 @@ const Footer = (p) => {
                   </Avatar>
                 </a>
               </li>
-              <li className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+              <li className={`${myRefIsVisible ? css.fadeUp : css.invisible}`}>
                 <a href="https://twitter.com">
                   <Avatar
                     sx={{
@@ -160,29 +160,34 @@ const Footer = (p) => {
           </div>
         </div>
         <div className={css.logoContent}>
-          <span className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+          <span className={`${myRefIsVisible ? css.fadeUp : css.invisible}`}>
             <img src={Logo} alt="logo" className={css.logo} />
           </span>
-          <h1 className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+          <h1 className={`${myRefIsVisible ? css.fadeUp : css.invisible}`}>
             {themeContext.t("CompanyName.1")}
           </h1>
-          <p className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+          <p className={`${myRefIsVisible ? css.fadeUp : css.invisible}`}>
             {themeContext.t("Address.1")}
           </p>
-          <p className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+          <p className={`${myRefIsVisible ? css.fadeUp : css.invisible}`}>
             {themeContext.t("Address.2")}
           </p>
         </div>
       </div>
       <div className={css.copylight}>
         <div className={css.scrollItems}>
-          <a href="#" className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+          <a
+            href="#"
+            className={`${myRefIsVisible ? css.fadeUp : css.invisible}`}
+          >
             <ScrollUpButton />
           </a>
-          <h1 className={`${myRefIsVisible ? css.fadeUp : ""}`}>TOP</h1>
+          <h1 className={`${myRefIsVisible ? css.fadeUp : css.invisible}`}>
+            TOP
+          </h1>
         </div>
         <div className={css.line} />
-        <h1 className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+        <h1 className={`${myRefIsVisible ? css.fadeUp : css.invisible}`}>
           {themeContext.t("Copyright.p")}
         </h1>
       </div>

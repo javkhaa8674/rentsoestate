@@ -9,6 +9,10 @@
     font-family: "Segoe UI";
 }
 
+.invisible {
+    opacity: 0;
+}
+
 .container {
     display: flex;
     padding: 1vw;
@@ -113,13 +117,13 @@
 
 .fadeUp {
     opacity: 0;
-    animation: fadeAnimation 1s forwards;
+    animation: fadeAnimation 2s forwards;
 }
 
 @keyframes fadeAnimation {
     0% {
         opacity: 0;
-        transform: translate(10px, 10px);
+        transform: translate(0px, 200px);
     }
     75% {
         opacity: 0.2;

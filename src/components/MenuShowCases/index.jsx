@@ -11,7 +11,7 @@ const MenuShowCases = (props) => {
   return (
     <>
       <div ref={myRef} className={css.container}>
-        <div className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+        <div className={`${myRefIsVisible ? css.fadeUp : css.invisible}`}>
           <div className={css.about}>
             <Link className={css.link} to="/about">
               <div className={css.Showcase}>
@@ -21,7 +21,7 @@ const MenuShowCases = (props) => {
             </Link>
           </div>
         </div>
-        <div className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+        <div className={`${myRefIsVisible ? css.fadeUp : css.invisible}`}>
           <div className={css.sell}>
             <Link className={css.link} to="/sell">
               <div className={css.Showcase}>
@@ -31,7 +31,7 @@ const MenuShowCases = (props) => {
             </Link>
           </div>
         </div>
-        <div className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+        <div className={`${myRefIsVisible ? css.fadeUp : css.invisible}`}>
           <div className={css.buy}>
             <Link className={css.link} to="/buy">
               <div className={css.Showcase}>
@@ -42,8 +42,8 @@ const MenuShowCases = (props) => {
           </div>
         </div>
       </div>
-      <div ref={myRef} className={css.container}>
-        <div className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+      <div ref={myRef} className={css.container2}>
+        <div className={`${myRefIsVisible ? css.fadeUp : css.invisible}`}>
           <div className={css.sale}>
             <Link className={css.link} to="/sale">
               <div className={css.Showcase}>
@@ -53,7 +53,7 @@ const MenuShowCases = (props) => {
             </Link>
           </div>
         </div>
-        <div className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+        <div className={`${myRefIsVisible ? css.fadeUp : css.invisible}`}>
           <div className={css.management}>
             <Link className={css.link} to="/management">
               <div className={css.Showcase}>
