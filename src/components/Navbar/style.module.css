@@ -126,9 +126,10 @@
         background-color: #053e79;
         color: #f3ebf6;
         align-items: center;
-        top: 10;
+        top: 0;
         justify-content: flex-end;
         padding: 1rem;
+        z-index: 1;
     }
     .dark {
         display: flex;
@@ -139,9 +140,10 @@
         background-color: #646262;
         color: #f3ebf6;
         align-items: center;
-        top: 10;
+        top: 0;
         justify-content: flex-end;
         padding: 1rem;
+        z-index: 1;
     }
     .hideOnModile {
         display: none;
