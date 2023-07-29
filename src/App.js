@@ -9,9 +9,12 @@ import Management from "./pages/Management";
 import Buy from "./pages/Buy";
 import Sell from "./pages/Sell";
 import Sale from "./pages/Sale";
-import TestPage from "./pages/TestPage";
+//import TestPage from "./pages/TestPage";
 import HomepageLayouts from "./layouts/HomePageLayouts";
 import ThemeContext from "./context/ThemeContext";
+import RentsoEstate from "./pages/RentsoEstate";
+import DevOrganisation from "./pages/DevOrganisation";
+import Mongoloju from "./pages/Mongoloju";
 import "./App.css";
 
 const App = (props) => {
@@ -112,7 +115,25 @@ const App = (props) => {
           path="/rentsoestate"
           render={() => (
             <HomepageLayouts>
-              <TestPage />
+              <RentsoEstate />
+            </HomepageLayouts>
+          )}
+        />
+        <Route
+          exact
+          path="/organization"
+          render={() => (
+            <HomepageLayouts>
+              <DevOrganisation />
+            </HomepageLayouts>
+          )}
+        />
+        <Route
+          exact
+          path="/mongoloju"
+          render={() => (
+            <HomepageLayouts>
+              <Mongoloju />
             </HomepageLayouts>
           )}
         />

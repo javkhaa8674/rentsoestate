@@ -17,18 +17,23 @@ const ShowCase = (props) => {
               </h1>
               <div className={css.wrap1}>
                 <div className={`${myRefIsVisible ? css.fadeUp : ""}`}>
-                  <a href="https://rentsoestate.mn/" className={css.btn1}>
+                  <a href="/rentsoestate" className={css.btn1}>
                     {themeContext.t("ShowCaseText.p1")}
                   </a>
                 </div>
                 <div className={`${myRefIsVisible ? css.fadeUp : ""}`}>
-                  <a href="#what" className={css.btn3}>
+                  <a href="/organization" className={css.btn3}>
                     {themeContext.t("ShowCaseText.p3")}
                   </a>
                 </div>
                 <div className={`${myRefIsVisible ? css.fadeUp : ""}`}>
-                  <a href="https://mongoloju.mn" className={css.btn2}>
+                  <a href="/mongoloju" className={css.btn2}>
                     {themeContext.t("ShowCaseText.p2")}
+                  </a>
+                </div>
+                <div className={`${myRefIsVisible ? css.fadeUp : ""}`}>
+                  <a href="/oronsuuts" className={css.btn2}>
+                    {themeContext.t("ShowCaseText.p4")}
                   </a>
                 </div>
               </div>

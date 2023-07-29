@@ -1,68 +1,68 @@
 {
-    "CompanyName": {
-        "0": "NATIONAL REAL ESTATE",
-        "1": "RENTS'O ESTATE LLC",
-        "2": "RENTS'O",
-        "3": "ESTATE"
+  "CompanyName": {
+    "0": "NATIONAL REAL ESTATE",
+    "1": "RENTS'O ESTATE LLC",
+    "2": "RENTS'O",
+    "3": "ESTATE"
+  },
+  "Menu": {
+    "1": "Home",
+    "2": "Any Question?",
+    "3": "broker@rentsoestate.mn"
+  },
+  "MenuURL": {
+    "1": "/",
+    "2": "/question",
+    "3": "/broker",
+    "4": "/about",
+    "5": "/sell",
+    "6": "/buy",
+    "7": "/sale",
+    "8": "/management"
+  },
+  "ShowCaseText": {
+    "h1": "We will provide comprehensive professional services with the highest standard of real estate in Mongolia.",
+    "h2": "3 easy steps to get our services",
+    "p1": "National Real Estate",
+    "p2": "MongolOJU",
+    "p3": "National Real Estate Development Association"
+  },
+  "MenuShowCases": {
+    "about": {
+      "h2": "About real estate",
+      "p": "Read More"
     },
-    "Menu": {
-        "1": "Home",
-        "2": "Any Question?",
-        "3": "broker@rentsoestate.mn"
+    "sell": {
+      "h2": "If you want to sell",
+      "p": "Read more"
     },
-    "MenuURL": {
-        "1": "/",
-        "2": "/question",
-        "3": "/broker",
-        "4": "/about",
-        "5": "/sell",
-        "6": "/buy",
-        "7": "/sale",
-        "8": "/management"
+    "buy": {
+      "h2": "If you want to buy",
+      "p": "Read more"
     },
-    "ShowCaseText": {
-        "h1": "We provide comprehensive real estate services in Mongolia.",
-        "h2": "3 easy steps to get our services",
-        "p1": "National Real Estate",
-        "p2": "MongolOJU",
-        "p3": "National Real Estate Development Association"
+    "sale": {
+      "h2": "Real estate sales",
+      "p": "Read more"
     },
-    "MenuShowCases": {
-        "about": {
-            "h2": "About real estate",
-            "p": "Read More"
-        },
-        "sell": {
-            "h2": "If you want to sell",
-            "p": "Read more"
-        },
-        "buy": {
-            "h2": "If you want to buy",
-            "p": "Read more"
-        },
-        "sale": {
-            "h2": "Real estate sales",
-            "p": "Read more"
-        },
-        "management": {
-            "h2": "Real estate management",
-            "p": "Read more"
-        }
-    },
-    "Copyright": {
-        "p": "© 2022 RENTS'O ESTATE LLC • All right reserved"
-    },
-
-    "Address": {
-        "1": "Sukhbaatar district, 1st khoroo, Chin Van Chagdarjav street-29, Ikh Khulgun center, #4-3 Tel: 88335696",
-        "2": "Ulaanbaatar, Mongolia"
-    },
-    "Footer": {
-        "Menu2": {
-            "0": "National Real Estate Agent",
-            "1": "Do you want to National Real Estate Agent?",
-            "2": "if you choose National Real Estate ...",
-            "3": "Contact Us"
-        }
+    "management": {
+      "h2": "Real estate management",
+      "p": "Read more"
     }
+  },
+  "Copyright": {
+    "p": "© 2022 RENTS'O ESTATE LLC • All right reserved"
+  },
+
+  "Address": {
+    "1": "Sukhbaatar district, 1st khoroo, Chin Van Chagdarjav street-29, Ikh Khulgun center, #4-3 Tel: 88335696",
+    "2": "Ulaanbaatar, Mongolia"
+  },
+  "Footer": {
+    "Menu2": {
+      "0": "National Real Estate Agent",
+      "1": "Do you want to National Real Estate Agent?",
+      "2": "if you choose National Real Estate ...",
+      "3": "Contact Us"
+    }
+  }
 }
