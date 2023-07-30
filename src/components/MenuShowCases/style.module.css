@@ -29,7 +29,7 @@
     color: #fff;
     margin: 5px;
     height: 100%;
-    background: rgb(78, 24, 179) url(../../assets/DSC_2970.JPG) no-repeat center center/cover;
+    background: rgb(78, 24, 179) url(../../assets/images/showcase2.jpg) no-repeat center center/cover;
 }
 
 .link {
@@ -61,7 +61,7 @@
     color: #fff;
     margin: 5px;
     height: 100%;
-    background: rgb(78, 24, 179) url(../../assets/DSC_2973.JPG) no-repeat center center/cover;
+    background: rgb(78, 24, 179) url(../../assets/images/showcase3.jpg) no-repeat center center/cover;
 }
 
 .sell .link .Showcase {
@@ -77,7 +77,7 @@
     display: flex;
     margin: 5px;
     height: 100%;
-    background: rgb(78, 24, 179) url(../../assets/DSC_2973.JPG) no-repeat center center/cover;
+    background: rgb(78, 24, 179) url(../../assets/images/showcase4.jpg) no-repeat center center/cover;
 }
 
 .buy .link .Showcase {
@@ -94,7 +94,7 @@
     color: #fff;
     margin: 5px;
     height: 100%;
-    background: rgb(78, 24, 179) url(../../assets/DSC_2973.JPG) no-repeat center center/cover;
+    background: rgb(78, 24, 179) url(../../assets/images/showcase5.jpg) no-repeat center center/cover;
 }
 
 .sale .link .Showcase {
@@ -110,7 +110,7 @@
     display: flex;
     margin: 5px;
     height: 100%;
-    background: rgb(78, 24, 179) url(../../assets/DSC_2973.JPG) no-repeat center center/cover;
+    background: rgb(78, 24, 179) url(../../assets/images/showcase6.jpg) no-repeat center center/cover;
 }
 
 .management .Showcase {

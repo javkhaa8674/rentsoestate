@@ -52,10 +52,10 @@ const Mongoloju = () => {
         ашиглах боломж- МонголОЖҮ©.{" "}
       </p>
       <div className={css.btn}>
+        <p>нэвтрэх</p>
         <a href="https://mongoloju.mn" className={css.btn2}>
-          Нэвтрэх
+          www.mongoloju.mn
         </a>
-        <h2>www.mongoloju.mn </h2>
       </div>
       <div>
         <h1>МонголОЖҮ©</h1>
