@@ -15,6 +15,7 @@ import ThemeContext from "./context/ThemeContext";
 import RentsoEstate from "./pages/RentsoEstate";
 import DevOrganisation from "./pages/DevOrganisation";
 import Mongoloju from "./pages/Mongoloju";
+import Oronsuuts from "./pages/Oronsuuts";
 import "./App.css";
 
 const App = (props) => {
@@ -134,6 +135,15 @@ const App = (props) => {
           render={() => (
             <HomepageLayouts>
               <Mongoloju />
+            </HomepageLayouts>
+          )}
+        />
+        <Route
+          exact
+          path="/oronsuuts"
+          render={() => (
+            <HomepageLayouts>
+              <Oronsuuts />
             </HomepageLayouts>
           )}
         />
