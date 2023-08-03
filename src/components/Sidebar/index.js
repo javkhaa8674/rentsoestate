@@ -7,15 +7,31 @@ import css from "./style.module.css";
 
 const SideBar = (props) => {
   const themeContext = useContext(ThemeContext);
+  const [theme, setTheme] = useState("light");
   const [active, setActive] = useState(false);
 
   useEffect(() => {
     setActive(themeContext.active);
   }, [themeContext.active]);
 
+  useEffect(() => {
+    setTheme(themeContext.theme);
+    return () => {
+      setTheme("light");
+    };
+  }, [themeContext.theme]);
+
   return (
     <header className={active ? css.Shadow : ""}>
-      <nav className={active ? `${css.SideBar}${" "}${css.show}` : css.Sidebar}>
+      <nav
+        className={
+          active && theme === "light"
+            ? `${css.SideBar}${" "}${css.show}`
+            : active && theme === "dark"
+            ? `${css.SideBarDark}${" "}${css.show}`
+            : css.Sidebar
+        }
+      >
         <ul className={!active && css.hideList}>
           <li>
             <a href="/" className={css.wrap}>
@@ -41,7 +57,13 @@ const SideBar = (props) => {
         </ul>
       </nav>
       <div
-        className={active ? `${css.darkBlue}${" "}${css.slide}` : css.darkBlue}
+        className={
+          active && theme === "light"
+            ? `${css.darkBlue}${" "}${css.slide}`
+            : active && theme === "dark"
+            ? `${css.darkGray}${" "}${css.slide}`
+            : css.darkBlue
+        }
       ></div>
     </header>
   );

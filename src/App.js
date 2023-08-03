@@ -16,6 +16,8 @@ import RentsoEstate from "./pages/RentsoEstate";
 import DevOrganisation from "./pages/DevOrganisation";
 import Mongoloju from "./pages/Mongoloju";
 import Oronsuuts from "./pages/Oronsuuts";
+import Study from "./pages/Study";
+import Agent from "./pages/Agent";
 import "./App.css";
 
 const App = (props) => {
@@ -104,15 +106,6 @@ const App = (props) => {
         />
         <Route
           exact
-          path="/404"
-          render={() => (
-            <HomepageLayouts>
-              <Page404 />
-            </HomepageLayouts>
-          )}
-        />
-        <Route
-          exact
           path="/rentsoestate"
           render={() => (
             <HomepageLayouts>
@@ -140,10 +133,37 @@ const App = (props) => {
         />
         <Route
           exact
+          path="/study"
+          render={() => (
+            <HomepageLayouts>
+              <Study />
+            </HomepageLayouts>
+          )}
+        />
+        <Route
+          exact
           path="/oronsuuts"
           render={() => (
             <HomepageLayouts>
               <Oronsuuts />
+            </HomepageLayouts>
+          )}
+        />
+        <Route
+          exact
+          path="/agent"
+          render={() => (
+            <HomepageLayouts>
+              <Agent />
+            </HomepageLayouts>
+          )}
+        />
+        <Route
+          exact
+          path="/404"
+          render={() => (
+            <HomepageLayouts>
+              <Page404 />
             </HomepageLayouts>
           )}
         />
