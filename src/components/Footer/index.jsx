@@ -34,21 +34,21 @@ const Footer = (p) => {
             </h1>
             <ul>
               <li className={`${myRefIsVisible ? css.fadeUp : css.invisible}`}>
-                <a href="https://nationalrealestate.mn">
+                <a href="/organization">
                   <span className={css.textPrimary}>
                     {themeContext.t("ShowCaseText.p3")}
                   </span>
                 </a>
               </li>
               <li className={`${myRefIsVisible ? css.fadeUp : css.invisible}`}>
-                <a href="https://rentsoestate.mn">
+                <a href="/rentsoestate">
                   <span className={css.textPrimary}>
                     {themeContext.t("ShowCaseText.p1")}
                   </span>
                 </a>
               </li>
               <li className={`${myRefIsVisible ? css.fadeUp : css.invisible}`}>
-                <a href="https://mongoloju.mn">
+                <a href="/mongoloju">
                   <span className={css.textPrimary}>
                     {themeContext.t("ShowCaseText.p2")}
                   </span>

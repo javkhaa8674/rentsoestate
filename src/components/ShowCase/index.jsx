@@ -32,7 +32,7 @@ const ShowCase = (props) => {
                   </a>
                 </div>
                 <div className={`${myRefIsVisible ? css.fadeUp : ""}`}>
-                  <a href="/study" className={css.btn2}>
+                  <a href="/study" className={css.btn4}>
                     {themeContext.t("ShowCaseText.p4")}
                   </a>
                 </div>

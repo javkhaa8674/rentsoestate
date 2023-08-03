@@ -1,185 +1,229 @@
 #showcase {
-    font-family: "Segoe UI";
-    background: rgb(78, 24, 179) url(../../assets/images/showcase1.jpg) no-repeat center center/cover;
-    height: 80vh;
-    color: #fff;
+  font-family: "Segoe UI";
+  background: rgb(78, 24, 179) url(../../assets/images/showcase1.jpg) no-repeat
+    center center/cover;
+  height: 80vh;
+  color: #fff;
 }
 
 #showcase .showcaseGradient {
-    height: 100%;
-    padding: 0;
-    /* overlay effect */
-    background: linear-gradient( to bottom, rgba(0, 122, 179, 0) 60%, rgba(0, 122, 179, 1));
-    top: 80px;
-    left: 0px;
+  height: 100%;
+  padding: 0;
+  /* overlay effect */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 122, 179, 0) 60%,
+    rgba(0, 122, 179, 1)
+  );
+  top: 80px;
+  left: 0px;
 }
 
 #showcase .showcaseContent {
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .wrap {
-    display: flex;
-    width: 50%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .wrap1 {
-    flex-direction: column;
-    flex: 1;
-    align-items: flex-start;
+  flex-direction: column;
+  flex: 1;
+  align-items: flex-start;
 }
 
 .wrap1 div {
-    margin: 0.5vw;
+  margin: 0.5vw;
 }
 
 .wrap1 div a {
-    display: flex;
+  display: flex;
 }
 
 .wrap h1 {
-    font-size: 2.5vw;
-    margin-bottom: 1vw;
-    line-height: 1.1;
+  font-size: 2.5vw;
+  margin-bottom: 1vw;
+  line-height: 1.1;
 }
 
 .wrap p {
-    font-size: 1.5vw;
-    margin-bottom: 1vw;
+  font-size: 1.5vw;
+  margin-bottom: 1vw;
 }
 
 .btn1 {
-    align-items: center;
-    color: rgb(221, 21, 21);
-    font-size: 1.5vw;
-    text-decoration: none;
-    transition: all 0.4s ease-in-out;
-    height: 5vw;
+  align-items: center;
+  color: rgb(221, 21, 21);
+  font-size: 1.5vw;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+  height: 5vw;
+  padding-left: 5px;
 }
 
 .btn2 {
-    align-items: center;
-    display: inline-block;
-    color: rgb(9, 189, 114);
-    font-size: 1.5vw;
-    text-decoration: none;
-    height: 5vw;
-    transition: all 0.4s ease-in-out;
+  align-items: center;
+  display: inline-block;
+  color: rgb(9, 189, 114);
+  font-size: 1.5vw;
+  text-decoration: none;
+  height: 5vw;
+  transition: all 0.4s ease-in-out;
+  padding-left: 5px;
 }
 
 .btn3 {
-    align-items: center;
-    display: inline-block;
-    color: rgb(245, 151, 11);
-    font-size: 1.5vw;
-    text-decoration: none;
-    height: 5vw;
-    transition: all 0.4s ease-in-out;
+  align-items: center;
+  display: inline-block;
+  color: rgb(245, 151, 11);
+  font-size: 1.5vw;
+  text-decoration: none;
+  height: 5vw;
+  transition: all 0.4s ease-in-out;
+  padding-left: 5px;
+}
+.btn4 {
+  align-items: center;
+  display: inline-block;
+  color: rgb(207, 219, 30);
+  font-size: 1.5vw;
+  text-decoration: none;
+  height: 5vw;
+  transition: all 0.4s ease-in-out;
+  padding-left: 5px;
 }
 
 .btn1:hover {
-    transition: all 0.4s ease-in-out;
-    transform: scale(1.1);
-    background: rgba(221, 21, 21, 0.4);
+  transition: all 0.4s ease-in-out;
+  transform: scale(1.1);
+  background: rgba(221, 21, 21, 0.4);
+  color: white;
 }
 
 .btn2:hover {
-    transition: all 0.4s ease-in-out;
-    transform: scale(1.1);
-    background: rgba(9, 189, 114, 0.4);
+  transition: all 0.4s ease-in-out;
+  transform: scale(1.1);
+  background: rgba(9, 189, 114, 0.4);
+  color: white;
 }
 
 .btn3:hover {
-    transition: all 0.4s ease-in-out;
-    transform: scale(1.1);
-    background: rgba(245, 151, 11, 0.4);
+  transition: all 0.4s ease-in-out;
+  transform: scale(1.1);
+  background: rgba(245, 151, 11, 0.4);
+  color: white;
+}
+.btn4:hover {
+  transition: all 0.4s ease-in-out;
+  transform: scale(1.1);
+  background: rgba(207, 219, 30, 0.4);
+  color: white;
 }
 
 .fadeUp {
-    opacity: 0;
-    animation: fadeAnimation 0.4s forwards;
+  opacity: 0;
+  animation: fadeAnimation 0.4s forwards;
 }
 
 @keyframes fadeAnimation {
-    0% {
-        opacity: 0;
-        transform: translate(10px, 10px);
-    }
-    75% {
-        opacity: 0.2;
-    }
-    100% {
-        opacity: 1;
-        transform: translate(0px, 0px);
-    }
+  0% {
+    opacity: 0;
+    transform: translate(10px, 10px);
+  }
+  75% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
 }
 
 .wrap h1 {
-    animation-delay: 0.1s;
+  animation-delay: 0.1s;
 }
 
 .wrap p {
-    animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
 .wrap div {
-    animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 
 @media (max-width: 600px) {
-    #showcase {
-        font-family: "Segoe UI";
-        background: rgb(78, 24, 179) url(../../assets/images/showcase1.jpg) no-repeat center center/cover;
-        height: 50vh;
-        color: #fff;
-    }
-    .wrap {
-        width: 100vh;
-    }
-    .wrap1 {
-        justify-content: center;
-    }
-    .wrap1 div {
-        margin: 4vw;
-    }
-    .wrap h1 {
-        font-size: 6vw;
-        margin-bottom: 2vw;
-        line-height: 1.1;
-    }
-    .wrap p {
-        font-size: 3vw;
-        margin-bottom: 2vw;
-    }
-    .btn1 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.4s ease-in-out;
-        font-size: 3vw;
-        background-color: rgba(255, 255, 255, 0.2);
-    }
-    .btn2 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.4s ease-in-out;
-        font-size: 3vw;
-        background-color: rgba(255, 255, 255, 0.2);
-    }
-    .btn3 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.4s ease-in-out;
-        font-size: 3vw;
-        background-color: rgba(255, 255, 255, 0.2);
-    }
+  #showcase {
+    font-family: "Segoe UI";
+    background: rgb(78, 24, 179) url(../../assets/images/showcase1.jpg)
+      no-repeat center center/cover;
+    height: 50vh;
+    color: #fff;
+  }
+  .wrap {
+    width: 100vh;
+  }
+  .wrap1 {
+    justify-content: center;
+  }
+  .wrap1 div {
+    margin: 4vw;
+  }
+  .wrap h1 {
+    font-size: 6vw;
+    margin-bottom: 2vw;
+    line-height: 1.1;
+  }
+  .wrap p {
+    font-size: 3vw;
+    margin-bottom: 2vw;
+  }
+  .btn1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    font-size: 5vw;
+    background-color: rgb(78, 24, 21);
+    color: white;
+    border-radius: 12px;
+  }
+  .btn2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    font-size: 5vw;
+    background-color: rgb(9, 189, 114);
+    color: white;
+    border-radius: 12px;
+  }
+  .btn3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    font-size: 5vw;
+    background-color: rgb(245, 151, 11);
+    color: white;
+    border-radius: 12px;
+  }
+  .btn4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    font-size: 5vw;
+    background-color: rgba(173, 24, 211, 0.2);
+    color: white;
+    border-radius: 12px;
+  }
 }

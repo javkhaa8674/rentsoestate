@@ -5,7 +5,7 @@ import mongoloju from "../../assets/images/mongoloju.jpg";
 const Mongoloju = () => {
   return (
     <div className={css.container}>
-      <h1>1.4 МонголОЖҮ©</h1>
+      <h1 className={css.title}>МонголОЖҮ©</h1>
       <p>
         Олон жагсаалтын үйлчилгээ буюу ОЖҮ нь Монгол Улсын үл хөдлөх хөрөнгийн
         борлуулалтын нэгдсэн цахим тавцан болно. МонголОЖҮ©- борлуулалтын
@@ -51,23 +51,31 @@ const Mongoloju = () => {
         брокерууд өөрийн бүртгэлээ үүсгэн дундын хэрэгцээндээ албан ёсоор
         ашиглах боломж- МонголОЖҮ©.{" "}
       </p>
-      <div className={css.btn}>
-        <p>нэвтрэх</p>
+      <div className={css.address}>
+        <p>Нэвтрэх</p>
         <a href="https://mongoloju.mn" className={css.btn2}>
           www.mongoloju.mn
         </a>
       </div>
-      <div>
-        <h1>МонголОЖҮ©</h1>
-        <p>
+      <div className={css.address}>
+        <h1 className={css.addressName}>МонголОЖҮ©</h1>
+        <a href="https://goo.gl/maps/eqfbHddcxaWuVEqGA">
           Улаанбаатар хот, Сүхбаатар дүүрэг, 1 дүгээр хороо, Чин Ван Чагдаржавын
           гудамж- 27, Их Хөлгөн Бизнес төв, #4-3 тоот
-        </p>
-        <p>УТАС: 88335696, 88624882</p>
-        <p>Цахим шуудан: director@nationalrealestate.mn</p>
-        <p>Цахим хуудас: www.nationalrealestate.mn</p>
-        <p>Цахим хуудас: www.mongoloju.mn </p>
-        <img src={mongoloju} alt="mongoloju" className={css.logo} />
+        </a>
+        <a href="tel:88335696">УТАС: 88335696, 88624882</a>
+        <a href="mailto:director@nationalrealestate.mn?subject=your title&body=TThe message">
+          Цахим шуудан: director@nationalrealestate.mn
+        </a>
+        <a href="https://www.nationalrealestate.mn">
+          Цахим хуудас: www.nationalrealestate.mn
+        </a>
+        <a href="https://www.mongoloju.mn">Цахим хуудас: www.mongoloju.mn</a>
+        <div className={css.images}>
+          <a href="https://www.mongoloju.mn">
+            <img src={mongoloju} alt="mongoloju" className={css.image} />
+          </a>
+        </div>
       </div>
     </div>
   );

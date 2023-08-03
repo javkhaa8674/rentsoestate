@@ -3,7 +3,7 @@ import css from "./style.module.css";
 const Management = () => {
   return (
     <div className={css.container}>
-      <h1>Үл хөдлөх эзэмшлийн удирдлага</h1>
+      <h1 className={css.title}>Үл хөдлөх эзэмшлийн удирдлага</h1>
       <p>
         Үндэсний Үл Хөдлөх Хөрөнгийн РЭНЦ’О ЭСТЭЙТ ХХК нь байшин, орон сууц,
         арилжааны зориулалттай албан тасалгааны болон худалдааны эзэмшлүүдийн
@@ -40,16 +40,28 @@ const Management = () => {
       <p>
         Бидэнтэй холбогд! Бид хамгийн сайн эзэмшлийн удирдлага чинь байх болно.
       </p>
-      <div>
-        <h1>Үндэсний Үл Хөдлөх Хөрөнгийн РЭНЦ’О ЭСТЭЙТ ХХК</h1>
-        <p>
-          Улаанбаатар хот, Сүхбаатар дүүрэг, 1 дүгээр хороо, Чин Ван Чагдаржавын
-          гудамж- 27, Их Хөлгөн Бизнес төв, #4-3 тоот
-        </p>
-        <p>Утас: 88335696, 88624882, 89988554, 99535551, 91007240</p>
-        <p>Цахим шуудан: broker@rentsoestate.mn</p>
-        <p>Цахим хуудас: www.rentsoestate.mn</p>
-        <p>Цахим хуудас: www.mongoloju.mn</p>
+      <div className={css.address}>
+        <h1 className={css.addressName}>
+          Үндэсний Үл Хөдлөх Хөрөнгийн РЭНЦ’О ЭСТЭЙТ ХХК
+        </h1>
+        <a href="https://goo.gl/maps/eqfbHddcxaWuVEqGA">
+          <p>
+            Улаанбаатар хот, Сүхбаатар дүүрэг, 1 дүгээр хороо, Чин Ван
+            Чагдаржавын гудамж- 27, Их Хөлгөн Бизнес төв, #4-3 тоот
+          </p>
+        </a>
+        <a href="tel:88335696">
+          <p>Утас: 88335696, 88624882, 89988554, 99535551, 91007240</p>
+        </a>
+        <a href="mailto:broker@rentsoestate.mn?subject=your title&body=TThe message">
+          <p>Цахим шуудан: broker@rentsoestate.mn</p>
+        </a>
+        <a href="https://www.rentsoestate.mn">
+          <p>Цахим хуудас: www.rentsoestate.mn</p>
+        </a>
+        <a href="https://www.mongoloju.mn">
+          <p>Цахим хуудас: www.mongoloju.mn</p>
+        </a>
       </div>
     </div>
   );

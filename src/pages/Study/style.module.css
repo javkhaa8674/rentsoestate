@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("http://fonts.cdnfonts.com/css/segoe-ui-4");
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI";
+  margin: 1rem;
+  font-size: 1.5rem;
+}
+.container p {
+  display: flex;
+  font-family: "Segoe UI";
+  padding-inline: 2rem;
+  justify-content: flex-start;
+  line-height: 1.5;
+  text-align: justify;
+  margin-top: 1rem;
+}
+.images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.image {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 350px;
+}
+.address {
+  flex-direction: column;
+  margin-top: 1rem;
+}
+.addressName {
+  font-size: 1.1rem;
+  justify-content: center;
+  align-items: flex-start;
+  padding-inline: 2rem;
+  margin-top: 1rem;
+}
+.address a {
+  text-indent: 0;
+  text-align: start;
+  line-height: 1;
+}
+.indent {
+  text-indent: 25px;
+}
+
+@media (max-width: 599px) {
+  .image {
+    width: 32%;
+  }
+}
