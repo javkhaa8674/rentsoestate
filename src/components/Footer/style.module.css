@@ -1,186 +1,198 @@
 .light {
-    background: #053e79;
-    margin: 10px 5px;
-    font-family: "Segoe UI";
+  background: #053e79;
+  margin: 10px 5px;
+  font-family: "Segoe UI";
 }
 
 .dark {
-    background: #646262;
-    font-family: "Segoe UI";
+  background: #646262;
+  font-family: "Segoe UI";
 }
 
 .invisible {
-    opacity: 0;
+  opacity: 0;
 }
 
 .container {
-    display: flex;
-    padding: 1vw;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    color: #fff;
+  display: flex;
+  padding: 1vw;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fff;
 }
 
 .menuItems {
-    display: flex;
+  display: flex;
 }
 
+.item a {
+  text-decoration: none;
+}
 .item h1 {
-    padding: 1vw;
-    font-size: 2vw;
+  padding: 1vw;
+  font-size: 2vw;
+}
+.itemTitle {
+  padding: 1vw;
+  font-size: 2vw;
 }
 
 .item ul {
-    display: flex;
+  display: flex;
 }
 
 .item ul li {
-    display: flex;
-    align-items: center;
-    padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
 }
 
 .item ul li a {
-    color: #fff;
-    list-style: none;
-    text-decoration: none;
-    font-size: 1vw;
+  color: #fff;
+  list-style: none;
+  text-decoration: none;
+  font-size: 1vw;
 }
 
 .socialItems .item ul li a {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 .logoContent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .logoContent h1 {
-    font-size: 1.5rem;
-    color: #f3ebf6;
+  font-size: 1.5rem;
+  color: #f3ebf6;
 }
 
 .logo {
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
 }
 
 .logoContent p {
-    display: flex;
-    color: #f3ebf6;
-    font-size: 0.9rem;
-    padding: 0.5rem;
-    font-weight: 300;
+  display: flex;
+  color: #f3ebf6;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  font-weight: 300;
 }
 
 .scrollItems {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    color: #2375cc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  color: #2375cc;
 }
 
 .scrollItems h1 {
-    color: #f3ebf6;
-    font-size: 1.5rem;
+  color: #f3ebf6;
+  font-size: 1.5rem;
 }
 
 .light .scrollItems a {
-    color: #2375cc;
+  color: #2375cc;
 }
 
 .dark .scrollItems a {
-    color: #f3ebf6;
+  color: #f3ebf6;
 }
 
 .copylight {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
 }
 
 .copylight h1 {
-    font-size: 0.8rem;
-    font-weight: 100;
-    color: #f3ebf6;
-    margin-top: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 100;
+  color: #f3ebf6;
+  margin-top: 0.5rem;
 }
 
 .copylight .line {
-    background: #f3ebf6;
+  background: #f3ebf6;
 }
 
 .fadeUp {
-    opacity: 0;
-    animation: fadeAnimation 2s forwards;
+  opacity: 0;
+  animation: fadeAnimation 2s forwards;
 }
 
 @keyframes fadeAnimation {
-    0% {
-        opacity: 0;
-        transform: translate(0px, 200px);
-    }
-    75% {
-        opacity: 0.2;
-    }
-    100% {
-        opacity: 1;
-        transform: translate(0px, 0px);
-    }
+  0% {
+    opacity: 0;
+    transform: translate(0px, 200px);
+  }
+  75% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
 }
 
 .logoContent h1 {
-    animation-delay: 0.1s;
+  animation-delay: 0.1s;
 }
 
 .logoContent p {
-    animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
 .scrollItems a {
-    animation-delay: 0.7s;
+  animation-delay: 0.7s;
 }
 
 .copylight h1 {
-    animation-delay: 0.8s;
+  animation-delay: 0.8s;
 }
 
 @media only screen and (max-width: 600px) {
-    .container {
-        margin-top: 1rem;
-    }
-    .menuItems {
-        flex-direction: column;
-    }
-    .item ul {
-        flex-direction: column;
-    }
-    .item h1 {
-        margin-top: 10vw;
-        padding: 3vw;
-        font-size: 4vw;
-    }
-    .item ul li {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 4vw;
-    }
-    .item ul li a {
-        color: #fff;
-        list-style: none;
-        text-decoration: none;
-        font-size: 3vw;
-    }
-    .socialItems .item ul {
-        flex-direction: row;
-    }
-    .socialItems .item ul li {
-        padding: 2vw;
-    }
+  .container {
+    margin-top: 1rem;
+  }
+  .menuItems {
+    flex-direction: column;
+  }
+  .item ul {
+    flex-direction: column;
+  }
+  .item h1 {
+    margin-top: 10vw;
+    padding: 3vw;
+    font-size: 4vw;
+  }
+  .itemTitle {
+    margin-top: 10vw;
+    padding: 3vw;
+    font-size: 4vw;
+  }
+  .item ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4vw;
+  }
+  .item ul li a {
+    color: #fff;
+    list-style: none;
+    text-decoration: none;
+    font-size: 3vw;
+  }
+  .socialItems .item ul {
+    flex-direction: row;
+  }
+  .socialItems .item ul li {
+    padding: 2vw;
+  }
 }

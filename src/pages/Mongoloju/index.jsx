@@ -5,6 +5,7 @@ import mongoloju from "../../assets/images/mongoloju.jpg";
 const Mongoloju = () => {
   return (
     <div className={css.container}>
+      <div className={css.fadeInText}>
       <h1 className={css.title}>МонголОЖҮ©</h1>
       <p>
         Олон жагсаалтын үйлчилгээ буюу ОЖҮ нь Монгол Улсын үл хөдлөх хөрөнгийн
@@ -53,31 +54,70 @@ const Mongoloju = () => {
       </p>
       <div className={css.address}>
         <p>Нэвтрэх</p>
-        <a href="https://mongoloju.mn" className={css.btn2}>
-          www.mongoloju.mn
-        </a>
+        <a href="https://mongoloju.mn">www.mongoloju.mn</a>
       </div>
       <div className={css.address}>
-        <h1 className={css.addressName}>МонголОЖҮ©</h1>
+        <h1 className={css.addressName}>
+          Үндэсний Үл Хөдлөх Хөрөнгийн РЭНЦ’О ЭСТЭЙТ ХХК
+        </h1>
         <a href="https://goo.gl/maps/eqfbHddcxaWuVEqGA">
-          Улаанбаатар хот, Сүхбаатар дүүрэг, 1 дүгээр хороо, Чин Ван Чагдаржавын
-          гудамж- 27, Их Хөлгөн Бизнес төв, #4-3 тоот
+          <p
+            style={{
+              textAlign: "left",
+              padding: "0",
+              margin: "0",
+            }}
+          >
+            Улаанбаатар хот, Сүхбаатар дүүрэг, 1 дүгээр хороо, Чин Ван
+            Чагдаржавын гудамж- 27, Их Хөлгөн Бизнес төв, #4-3 тоот
+          </p>
         </a>
-        <a href="tel:88335696">УТАС: 88335696, 88624882</a>
-        <a href="mailto:director@nationalrealestate.mn?subject=your title&body=TThe message">
-          Цахим шуудан: director@nationalrealestate.mn
+        <a href="tel:88335696">
+          <p
+            style={{
+              textAlign: "left",
+              padding: "0",
+              margin: "0",
+            }}
+          >
+            Утас: 88335696, 88624882, 89988554, 99535551, 91007240
+          </p>
         </a>
-        <a href="https://www.nationalrealestate.mn">
-          Цахим хуудас: www.nationalrealestate.mn
+        <a href="mailto:broker@rentsoestate.mn?subject=your title&body=TThe message">
+          <p
+            style={{
+              textAlign: "left",
+              padding: "0",
+              margin: "0",
+            }}
+          >
+            Цахим шуудан: broker@rentsoestate.mn
+          </p>
         </a>
-        <a href="https://www.mongoloju.mn">Цахим хуудас: www.mongoloju.mn</a>
-        <div className={css.images}>
-          <a href="https://www.mongoloju.mn">
-            <img src={mongoloju} alt="mongoloju" className={css.image} />
-          </a>
-        </div>
+        <a href="https://www.rentsoestate.mn">
+          <p
+            style={{
+              textAlign: "left",
+              padding: "0",
+              margin: "0",
+            }}
+          >
+            Цахим хуудас: www.rentsoestate.mn
+          </p>
+        </a>
+        <a href="https://www.mongoloju.mn">
+          <p
+            style={{
+              textAlign: "left",
+              padding: "0",
+              margin: "0",
+            }}
+          >
+            Цахим хуудас: www.mongoloju.mn
+          </p>
+        </a>
       </div>
-    </div>
+    </div></div>
   );
 };
 

@@ -18,6 +18,7 @@ import Mongoloju from "./pages/Mongoloju";
 import Oronsuuts from "./pages/Oronsuuts";
 import Study from "./pages/Study";
 import Agent from "./pages/Agent";
+import FutureCustomer from "./pages/FutureCustomer";
 import "./App.css";
 
 const App = (props) => {
@@ -155,6 +156,15 @@ const App = (props) => {
           render={() => (
             <HomepageLayouts>
               <Agent />
+            </HomepageLayouts>
+          )}
+        />
+        <Route
+          exact
+          path="/futurecustomer"
+          render={() => (
+            <HomepageLayouts>
+              <FutureCustomer />
             </HomepageLayouts>
           )}
         />

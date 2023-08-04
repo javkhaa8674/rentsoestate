@@ -57,15 +57,22 @@ const Footer = (p) => {
             </ul>
           </div>
           <div className={css.item}>
-            <h1 className={`${myRefIsVisible ? css.fadeUp : css.invisible}`}>
-              {themeContext.t("Footer.Menu2.0")}
-            </h1>
+            <a href="/agent">
+              <h1
+                className={`${
+                  myRefIsVisible ? css.fadeUp : [css.itemTitle, css.invisible]
+                }`}
+                style={{ color: "#fff" }}
+              >
+                {themeContext.t("Footer.Menu2.0")}
+              </h1>
+            </a>
             <ul>
               <li className={`${myRefIsVisible ? css.fadeUp : css.invisible}`}>
-                <a href="/">{themeContext.t("Footer.Menu2.1")}</a>
+                <a href="/oronsuuts">{themeContext.t("Footer.Menu2.1")}</a>
               </li>
               <li className={`${myRefIsVisible ? css.fadeUp : css.invisible}`}>
-                <a href="/">{themeContext.t("Footer.Menu2.2")}</a>
+                <a href="/futurecustomer">{themeContext.t("Footer.Menu2.2")}</a>
               </li>
             </ul>
           </div>
@@ -93,7 +100,7 @@ const Footer = (p) => {
                 </a>
               </li>
               <li className={`${myRefIsVisible ? css.fadeUp : css.invisible}`}>
-                <a href="tel:8665562570">
+                <a href="tel:88335696">
                   <Avatar
                     sx={{
                       bgcolor: "rgba(0,0,0,0)",
