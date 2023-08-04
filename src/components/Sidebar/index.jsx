@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import ThemeContext from "./../../context/ThemeContext";
+import ThemeContext from "../../context/ThemeContext";
 import HomeIcon from "@mui/icons-material/Home";
 import CallIcon from "@mui/icons-material/Call";
 import MailIcon from "@mui/icons-material/Mail";
