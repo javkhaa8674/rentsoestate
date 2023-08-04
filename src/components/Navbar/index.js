@@ -60,7 +60,7 @@ const Navbar = (props) => {
         </div>
         <div className={`${myRefIsVisible ? css.fadeUp : ""}`}>
           <li>
-            <a href="tel:8665562570" className={css.wrap}>
+            <a href="tel:88335696" className={css.wrap}>
               <CallIcon sx={{ marginRight: 1 }} />
               {themeContext.t("Menu.2")}
             </a>
