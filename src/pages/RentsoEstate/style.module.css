@@ -72,9 +72,14 @@
 .container ul {
   display: flex;
   flex-direction: column;
+  font-family: "Segoe UI";
+  padding-inline: 2rem;
+  justify-content: flex-start;
   line-height: 1.5;
-  text-indent: 50px;
+  text-align: justify;
   margin-top: 1rem;
+  margin-left: 1rem;
+  list-style-type: decimal;
 }
 .images {
   display: flex;
